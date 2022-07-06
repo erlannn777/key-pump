@@ -76,7 +76,11 @@ const CartModal = () => {
                   <div className="flex flex-col justify-between ml-2">
                     <span>ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)</span>
                     <div className="flex items-center">
-                      -<div className="border p-1 mx-2">2</div>+
+                      <div className="m-2">
+                        <span className="text-xl">-</span>
+                        <span className="border py-1 px-4 mx-2">2</span>
+                        <span className="text-xl">+</span>
+                      </div>
                     </div>
                   </div>
                   <div className="flex flex-col justify-between">

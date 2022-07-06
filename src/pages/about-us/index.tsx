@@ -42,7 +42,7 @@ const AboutUs = () => {
                 </div>
                 <div className="flex flex-col items-center">
                     <div className="w-full flex justify-between items-center sm:block">
-                        <img className="object-contain w-80 h-96" src={firstImg} alt=""/>
+                        <img className="object-contain w-80 h-96" src={firstImg} alt="" />
                         <div className='w-1/2 sm:w-full'>
                             <div className='my-4'>
                                 <span className='text-3xl'>Компания</span>
@@ -73,7 +73,7 @@ const AboutUs = () => {
                                 </p>
                             </div>
                         </div>
-                        <img className="object-contain w-100 h-96" src={secondImg} alt=""/>
+                        <img className="object-contain w-100 h-96" src={secondImg} alt="" />
                     </div>
                     <div className="flex flex-col mt-8">
                         <div className="text-center">
@@ -81,48 +81,48 @@ const AboutUs = () => {
                         </div>
                         <div className="w-full flex items-center justify-between sm:block">
                             <div>
-                                <img className="object-contain w-80 h-96" src={fourthImg} alt=""/>
+                                <img className="object-contain w-80 h-96" src={fourthImg} alt="" />
                             </div>
                             <div className='w-1/2 pl-4 flex sm:w-full'>
                                 <div>
-                                <div className='mb-4 flex items-start'>
-                                    <div>
-                                        <img src={logo1} alt="logo" className='outline w-12 rounded-full text-orange-400 p-1 '/>
+                                    <div className='mb-4 flex items-start'>
+                                        <div>
+                                            <img src={logo1} alt="logo" className='outline w-12 rounded-full text-orange-400 p-1 ' />
+                                        </div>
+                                        <div className='pl-4'>
+                                            <span>Возврат стоимости</span>
+                                            <p className='text-sm'>
+                                                За каждый отправленый товар который окажеться бракованным, мы
+                                                вернем вам стоимость.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div  className='pl-4'>
-                                        <span>Возврат стоимости</span>
-                                        <p className='text-sm'>
-                                            За каждый отправленый товар который окажеться бракованным, мы
-                                            вернем вам стоимость.
-                                        </p>
+                                    <div className='mb-4 flex items-start'>
+                                        <div>
+                                            <img src={logo2} alt="logo" className='outline w-24 text-orange-400 rounded-full p-1' />
+                                        </div>
+                                        <div className='pl-4'>
+                                            <span>Монтаж</span>
+                                            <p className='text-sm'>
+                                                За каждый отправленый товар который окажеться бракованным, мы
+                                                вернем вам стоимость.Наши квалифицированные специалисты
+                                                обеспечат высокое качество монтажа и наладки
+                                                электрооборудования
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='mb-4 flex items-start'>
-                                    <div>
-                                        <img src={logo2} alt="logo" className='outline w-24 text-orange-400 rounded-full p-1'/>
+                                    <div className='mb-4 flex items-start'>
+                                        <div>
+                                            <img src={logo3} alt="logo" className='outline w-12 text-orange-400 rounded-full p-1' />
+                                        </div>
+                                        <div className='pl-4'>
+                                            <span>Надежность</span>
+                                            <p className='text-sm'>
+                                                Мы поставляем лучшее в своем классе оборудование ведущих
+                                                зарубежных производителей
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className='pl-4'>
-                                        <span>Монтаж</span>
-                                        <p className='text-sm'>
-                                            За каждый отправленый товар который окажеться бракованным, мы
-                                            вернем вам стоимость.Наши квалифицированные специалисты
-                                            обеспечат высокое качество монтажа и наладки
-                                            электрооборудования
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className='mb-4 flex items-start'>
-                                    <div>
-                                        <img src={logo3} alt="logo" className='outline w-12 text-orange-400 rounded-full p-1'/>
-                                    </div>
-                                    <div  className='pl-4'>
-                                        <span>Надежность</span>
-                                        <p className='text-sm'>
-                                            Мы поставляем лучшее в своем классе оборудование ведущих
-                                            зарубежных производителей
-                                        </p>
-                                    </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +201,7 @@ const AboutUs = () => {
                         </div>
                         <div className="w-full flex flex-wrap justify-center">
                             {brands.map((brand: any, index) => (
-                                <img key={index} src={brand} alt=""/>
+                                <img key={index} src={brand} alt="" />
                             ))}
                         </div>
                     </div>
@@ -211,17 +211,17 @@ const AboutUs = () => {
                         </div>
                         <div className="w-full flex justify-center sm:block">
                             <div className="flex flex-col items-center bg-gray-200 p-2 m-2">
-                                <img className="object-contain w-72 h-80" src={builder1} alt=""/>
+                                <img className="object-contain w-72 h-80" src={builder1} alt="" />
                                 <span>Специалист по монтажу тепловых насосов</span>
                                 <p>Александров П. А.</p>
                             </div>
                             <div className="flex flex-col items-center bg-gray-200 p-2 m-2">
-                                <img className="object-contain w-72 h-80" src={builder2} alt=""/>
+                                <img className="object-contain w-72 h-80" src={builder2} alt="" />
                                 <span>Специалист по монтажу тепловых насосов</span>
                                 <p>Александров П. А.</p>
                             </div>
                             <div className="flex flex-col items-center bg-gray-200 p-2 m-2">
-                                <img className="object-contain w-72 h-80" src={builder1} alt=""/>
+                                <img className="object-contain w-72 h-80" src={builder1} alt="" />
                                 <span>Специалист по монтажу тепловых насосов</span>
                                 <p>Александров П. А.</p>
                             </div>
