@@ -1,0 +1,113 @@
+.navListItem{
+    display: flex;
+    align-items: center;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.navList{
+    list-style-type: none;
+}
+
+.nav{
+    background-color: #24272E;
+    color: white;
+    padding: 1rem 0;
+}
+
+.headerPromo{
+    background-color: #454F5B;
+    color: white;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    padding: 0.3rem 0;
+}
+
+.headerPromo>span{
+    text-decoration:underline solid;
+    text-align: center;
+}
+.headerPromo>p{
+    text-align: right;
+}
+
+.search{
+    background-color: rgba(255, 255, 255, 0.83);
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+
+.navListItemInput{
+    background-color: transparent;
+    color: #24272E;
+    box-sizing:unset;
+    border: 0;
+    font-size: 2vh;
+}
+
+.navListItemInput:focus{
+    background-color: transparent;
+    color: #24272E;
+    box-sizing:unset;
+    border: 0;
+}
+
+.loupe{
+    justify-content: center;
+    display: grid;
+    margin: auto;
+    filter: invert(0.7);
+}
+
+.navListLogo{
+    /*padding: .5vh 0;*/
+    height: 3rem;
+}
+
+.navList{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 2.5fr 1.4fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+.navListItemBtn{
+    background-color: rgba(246, 171, 58, 1);
+    padding: .4vh 2vh;
+    border: none;
+}
+
+.phoneItem{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+}
+
+.phone{
+    height: 2.5vh;
+    width: 2.5vh;
+    justify-content: right;
+    display: grid;
+}
+
+.phoneWrapper{
+    width: 100%;
+    display: grid;
+    justify-content: right;
+}
+
+.yellow{
+    width: 5rem
+}
+
