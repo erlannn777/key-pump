@@ -57,6 +57,21 @@ code {
   box-shadow: inset 0px 1px 0px #c4cdd5, inset 0px -1px 0px #c4cdd5;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.active {
+  border-bottom: 2px solid pink;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
 /* .slide-enter {
     transform: translateX(-95vw);
   }

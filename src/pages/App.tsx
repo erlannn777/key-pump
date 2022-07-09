@@ -15,6 +15,8 @@ import Checkout from "./checkout/checkout";
 import CartModal from "../components/CartModal";
 import { Provider } from "react-redux";
 import store from "../store";
+import "@splidejs/react-splide/css";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
 function App() {
   return (

@@ -5,6 +5,7 @@ import { useCartModal } from "../../store/ui/hooks";
 import { closeCartModal } from "../../store/ui/actions";
 import productExample from "./assets/example.png";
 import { BsFillTrashFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const CartModal = () => {
   const dispatch = useAppDispatch();
@@ -46,12 +47,10 @@ const CartModal = () => {
             leaveTo="opacity-0 transform scale-95 "
           >
             <div className="p-7  bg-white  inline-block align-center align-middle rounded-xl  border-2 border-gray  text-center overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle ">
-              <div
-                className=" w-full flex justify-between"
-                onClick={() => dispatch(closeCartModal())}
-              >
+              <div className=" w-full flex justify-between">
                 <span>Корзина</span>
                 <svg
+                  onClick={() => dispatch(closeCartModal())}
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 "
                   viewBox="0 0 24 24"
@@ -95,9 +94,12 @@ const CartModal = () => {
                   <span>Итого: 460 000₽</span>
                 </div>
                 <div className="w-full flex justify-between">
-                  <button className="bg-amber-400 p-1 border">
+                  <Link
+                    className="bg-amber-400 p-1 border outline-hidden"
+                    to="/checkout"
+                  >
                     Оформить заказ
-                  </button>
+                  </Link>
                   <button className="border border-amber-400 p-1">
                     Продолжить покупки
                   </button>
@@ -110,20 +112,6 @@ const CartModal = () => {
                   <span>С этим покупают</span>
                 </div>
                 <div className="w-full ">
-                  <div className="flex justify-between my-2">
-                    <div className="flex items-center w-2/3">
-                      <img src={productExample} alt="" />
-                      <div className="text-start ml-2">
-                        <span className="	break-all	">
-                          УСТАНОВКА УФ-ОБЕЗЗАРАЖИВАНИЯ VIQUA VH150/2F, BWT
-                        </span>
-                        <span>90 000₽</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center text-amber-500">
-                      + <span className="sm:hidden block"> Добавить</span>
-                    </div>
-                  </div>
                   <div className="flex justify-between my-2">
                     <div className="flex items-center w-2/3">
                       <img src={productExample} alt="" />

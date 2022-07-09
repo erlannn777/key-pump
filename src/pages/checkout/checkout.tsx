@@ -4,8 +4,8 @@ const Checkout = () => {
   return (
     <div className="w-full flex flex-col items-center px-12 mt-22 ">
       <h1 className="w-full text-4xl py-4 font-bold">Оформление заказа</h1>
-      <div className="w-full flex  items-start justify-around ">
-        <div className="border rounded mb-4 p-2">
+      <div className="w-full flex  items-start justify-center  ">
+        <div className="border rounded m-8 mb-4 p-2">
           <h2>1. Контактные данные</h2>
           <form>
             <div className="flex items-center sm:block">
@@ -83,7 +83,7 @@ const Checkout = () => {
             </div>
           </form>
         </div>
-        <div className="border rounded mb-4">
+        <div className="border rounded m-8 mb-4">
           <h1 className="p-4 text-2xl font-bold">Итоги</h1>
           <div className="border-b-[1.5px]" />
           <div>
