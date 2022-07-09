@@ -464,7 +464,6 @@ const Home = () => {
         {/* <Why /> */}
         {/* <PopProd pops={pops} /> */}
         {/* <Articles /> */}
-        {/* <WeCallYou /> */}
       </div>
       <div className="w-full flex flex-col items-center text-center py-12 bg-slate-100">
         <span className="text-3xl font-bold">Мы Вам перезвоним</span>
