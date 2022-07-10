@@ -286,7 +286,7 @@ const Home = () => {
             {advantages.map((item, index) => (
               <div
                 key={index}
-                className=" border-b-2 border-t-2 border-gray flex flex-col items-center m-8 p-4 text-center"
+                className="w-80 border-b-2 border-t-2 border-gray flex flex-col items-center m-8 p-4 text-center"
               >
                 {item.vector}
                 <p>{item.label}</p>
@@ -326,9 +326,7 @@ const Home = () => {
               Долговечность
             </label>
           </div>
-          <div className="w-full hidden lg:block">
-            <img className="w-96 h-96" src={img} alt="" />
-          </div>
+          <img className="w-96 h-96 hidden lg:block" src={img} alt="" />
         </div>
         <div className="my-2">
           <div className="text-2xl lg:text-3xl font-normal  text-center ">
@@ -474,7 +472,6 @@ const Home = () => {
               : null}
           </Splide>
         </div>
-        {/* <Why /> */}
         {/* <PopProd pops={pops} /> */}
         {/* <Articles /> */}
       </div>
