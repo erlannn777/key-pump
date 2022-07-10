@@ -74,7 +74,9 @@ export default function Carousel() {
 
   return (
     <div className="my-2">
-      <span className="text-3xl font-medium ">Вы недавно просмотрели</span>
+      <div className="text-3xl font-base text-center lg:text-start">
+        Вы недавно просмотрели
+      </div>
       <Splide
         //@ts-ignore
         ref={ref}

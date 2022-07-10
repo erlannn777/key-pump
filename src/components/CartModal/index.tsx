@@ -73,7 +73,9 @@ const CartModal = () => {
                     <img src={productExample} alt="" />
                   </div>
                   <div className="flex flex-col justify-between ml-2">
-                    <span>ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)</span>
+                    <span className="text-sm">
+                      ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)
+                    </span>
                     <div className="flex items-center">
                       <div className="m-2">
                         <span className="text-xl">-</span>
@@ -83,11 +85,11 @@ const CartModal = () => {
                     </div>
                   </div>
                   <div className="flex flex-col justify-between">
-                    <div className="flex text-amber-500 items-center">
+                    <div className="flex text-amber-500 items-center lg:text-base text-2xl">
                       <BsFillTrashFill />
-                      Удалить
+                      <span className="hidden lg:block "> Удалить</span>
                     </div>
-                    <span>230 000₽</span>
+                    <div>230 000₽</div>
                   </div>
                 </div>
                 <div className="w-full text-start my-2">
@@ -113,17 +115,17 @@ const CartModal = () => {
                 </div>
                 <div className="w-full ">
                   <div className="flex justify-between my-2">
-                    <div className="flex items-center w-2/3">
+                    <div className="flex items-center w-64">
                       <img src={productExample} alt="" />
                       <div className="text-start ml-2">
-                        <span className="	break-all	">
+                        <span className="text-sm	break-all	">
                           УСТАНОВКА УФ-ОБЕЗЗАРАЖИВАНИЯ VIQUA VH150/2F, BWT
                         </span>
                         <span>90 000₽</span>
                       </div>
                     </div>
-                    <div className="flex items-center text-amber-500">
-                      + <span className="sm:hidden block"> Добавить</span>
+                    <div className="flex items-center text-amber-500 lg:text-base text-3xl">
+                      + <span className="hidden lg:block"> Добавить</span>
                     </div>
                   </div>
                 </div>

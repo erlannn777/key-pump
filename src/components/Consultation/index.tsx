@@ -3,7 +3,9 @@ import React from "react";
 const Consultation = () => {
   return (
     <div className="w-full flex flex-col items-center text-center py-12 bg-slate-100">
-      <span className="text-2xl font-bold">Мы Вам перезвоним</span>
+      <div className="text-2xl font-medium text-center lg:text-start">
+        Мы Вам перезвоним
+      </div>
       <p className="text-sm">
         Если у вас возникли какие-то вопросы или проблемы, заполните форму и мы
         Вам перезвоним.

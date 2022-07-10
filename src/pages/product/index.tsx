@@ -1,4 +1,5 @@
-import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel";
 import Consultation from "../../components/Consultation";
@@ -6,9 +7,25 @@ import img from "../../img/carouselImg.png";
 import Tab from "./Tabs";
 
 const Product = () => {
+  const ref = useRef();
+
+  const products = [
+    {
+      img: img,
+    },
+    {
+      img: img,
+    },
+    {
+      img: img,
+    },
+    {
+      img: img,
+    },
+  ];
   return (
     <>
-      <div className="mx-12">
+      <div className="lg:mx-12 mx-2">
         <div className="w-full flex items-center mt-6">
           <Link to="/" className="col-span-1  text-xl text-black">
             Главная/
@@ -20,17 +37,59 @@ const Product = () => {
             Геотермальный тепловой насос
           </Link>
         </div>
-        <div className="w-full flex justify-between">
-          <div className="w-full p-2 ">
-            <div className="w-full flex justify-center">
+        <div className="w-full block lg:flex justify-between">
+          <div className="w-full ">
+            <div className="w-full flex justify-center hidden lg:block">
               <img className="w-96 h-96" src={img} alt="" />
             </div>
 
             <div className="w-full flex justify-between mt-4">
-              <img className="w-36 h-36" src={img} alt="" />
-              <img className="w-36 h-36" src={img} alt="" />
-              <img className="w-36 h-36" src={img} alt="" />
-              <img className="w-36 h-36" src={img} alt="" />
+              <Splide
+                //@ts-ignore
+                ref={ref}
+                options={{
+                  rewind: false,
+                  perPage: 3,
+                  perMove: 1,
+                  gap: 20,
+                  pagination: false,
+                  breakpoints: {
+                    623: {
+                      perPage: 2,
+                      perMove: 1,
+                    },
+                    935: {
+                      perPage: 3,
+                      perMove: 1,
+                    },
+                    1247: {
+                      perPage: 3,
+                      perMove: 1,
+                    },
+                  },
+                }}
+                onMounted={() => {
+                  console.log("mounted");
+                }}
+                onUpdated={() => {
+                  console.log("updated");
+                }}
+                onMoved={() => {
+                  console.log("moved");
+                }}
+                onVisible={(splide, slide) => {
+                  console.log("visible", slide.index);
+                }}
+                className="mt-2"
+              >
+                {products.length > 0
+                  ? products.map((item, index) => (
+                      <SplideSlide key={index}>
+                        <img className="w-40 h-40" src={item.img} alt="" />
+                      </SplideSlide>
+                    ))
+                  : null}
+              </Splide>
             </div>
           </div>
           <div className="w-full p-2">

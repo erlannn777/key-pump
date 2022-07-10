@@ -51,8 +51,8 @@ const Tab = () => {
           <div className="px-4 py-5 flex-auto w-full">
             <div className="tab-content tab-space w-full">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                <div className="w-full flex justify-between">
-                  <table className="w-2/4 m-2">
+                <div className="w-full block lg:flex justify-center">
+                  <table className="w-80 m-2 lg:mx-24">
                     <tbody>
                       <tr className="bg-slate-100">
                         <td className="">Тип</td>
@@ -80,7 +80,7 @@ const Tab = () => {
                       </tr>
                     </tbody>
                   </table>
-                  <table className="w-2/4 m-2">
+                  <table className="w-80 m-2 lg:mx-24">
                     <tbody>
                       <tr className="bg-slate-100">
                         <td className="">Максимальная температура нагрева</td>
@@ -126,21 +126,21 @@ const Tab = () => {
                 </div>
                 <div className="flex flex-col">
                   <label className="m-2">
-                    <input type="checkbox" checked={true} />
+                    <input className="m-1" type="checkbox" checked={true} />
                     Экономия до 75 % расходов на отопление и ГВС;
                   </label>
                   <label className="m-2">
-                    <input type="checkbox" checked={true} />
+                    <input className="m-1" type="checkbox" checked={true} />
                     Компрессор Copeland обеспечивает высокую надежность и
                     эффективность;
                   </label>{" "}
                   <label className="m-2">
-                    <input type="checkbox" checked={true} />
+                    <input className="m-1" type="checkbox" checked={true} />
                     Тип теплового насоса: геотермальный (источником тепла
                     является грунт или вода);
                   </label>{" "}
                   <label className="m-2">
-                    <input type="checkbox" checked={true} />
+                    <input className="m-1" type="checkbox" checked={true} />
                     Окупаемость за 4-9 лет;
                   </label>
                 </div>
@@ -161,7 +161,7 @@ const Tab = () => {
               </div>
               <div className={openTab === 3 ? "block" : "hidden"} id="link3">
                 <div className="w-full flex justify-center">
-                  <tbody>
+                  <tbody className="w-80">
                     <tr className="bg-slate-100">
                       <td className="">Производитель</td>
                       <td className="">Nibe</td>

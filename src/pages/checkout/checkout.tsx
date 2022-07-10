@@ -2,19 +2,21 @@ import React from "react";
 
 const Checkout = () => {
   return (
-    <div className="w-full flex flex-col items-center px-12 mt-22 ">
-      <h1 className="w-full text-4xl py-4 font-bold">Оформление заказа</h1>
-      <div className="w-full flex  items-start justify-center  ">
-        <div className="border rounded m-8 mb-4 p-2">
+    <div className="w-full flex flex-col items-center lg:px-12 mt-22 ">
+      <div className="w-full text-2xl lg:text-4xl py-4 font-normal text-center">
+        Оформление заказа
+      </div>
+      <div className="w-full flex  lg:items-start items-center justify-center flex-col md:flex-row">
+        <div className="border rounded m-8 mb-4 p-2 w-80">
           <h2>1. Контактные данные</h2>
           <form>
-            <div className="flex items-center sm:block">
+            <div className="block">
               <label className="flex flex-col m-1">
-                Фамиля
+                Фамилия
                 <input
                   type="text"
-                  placeholder="Фамиля"
-                  className="border rounded py-1"
+                  placeholder="Фамилия"
+                  className="border rounded p-1"
                 />
               </label>
               <label className="flex flex-col m-1">
@@ -22,17 +24,17 @@ const Checkout = () => {
                 <input
                   type="text"
                   placeholder="Имя"
-                  className="border rounded py-1 pl-1"
+                  className="border rounded p-1"
                 />
               </label>
             </div>
-            <div className="flex items-center mb-4 sm:block">
+            <div className="mb-4 block">
               <label className="flex flex-col m-1">
                 Телефон
                 <input
                   type="phone"
                   placeholder="+7(___)___ ___ ___"
-                  className="border rounded py-1 pl-1"
+                  className="border rounded p-1"
                 />
               </label>
               <label className="flex flex-col m-1">
@@ -40,7 +42,7 @@ const Checkout = () => {
                 <input
                   type="email"
                   placeholder="example@mail.ru"
-                  className="border rounded py-1 pl-1"
+                  className="border rounded p-1"
                 />
               </label>
             </div>
@@ -78,12 +80,12 @@ const Checkout = () => {
               <span className="pb-2">Комментарий</span>
               <textarea
                 placeholder="Напишите комментарий"
-                className="border rounded"
+                className="border rounded p-1"
               ></textarea>
             </div>
           </form>
         </div>
-        <div className="border rounded m-8 mb-4">
+        <div className="border rounded m-8 mb-4 w-80">
           <h1 className="p-4 text-2xl font-bold">Итоги</h1>
           <div className="border-b-[1.5px]" />
           <div>

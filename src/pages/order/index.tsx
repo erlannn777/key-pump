@@ -5,7 +5,7 @@ import pochta from "./assets/pochta.png";
 
 const Order = () => {
   return (
-    <div className="w-full flex justify-center my-8">
+    <div className="w-full flex justify-center my-8 mx-2">
       <div className="w-full container sm:max-w-full">
         <h2>
           Главная / <span className="text-gray-400">Доставка и оплата</span>
@@ -14,7 +14,7 @@ const Order = () => {
           <span className="text-3xl font-bold">Доставка</span>
         </div>
         <div className="w-full flex flex-col items-center">
-          <div className="w-full flex justify-center sm:block">
+          <div className="w-full block justify-center lg:flex">
             <div className="flex flex-col m-2">
               <div>
                 <img className="object-contain" src={pochta} alt="" />

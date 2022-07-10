@@ -249,7 +249,7 @@ const Home = () => {
           onVisible={(splide, slide) => {
             console.log("visible", slide.index);
           }}
-          className="mt-2"
+          className="mt-2 relative"
         >
           {products.length > 0
             ? products.map((item, index) => (
@@ -272,6 +272,10 @@ const Home = () => {
                 </SplideSlide>
               ))
             : null}
+          {/* <div className="splide__arrows absolute top-96 flex ">
+            <button className="splide__arrow splide__arrow--prev">Prev</button>
+            <button className="splide__arrow splide__arrow--next">Next</button>
+          </div> */}
         </Splide>
         <div className="my-8">
           <div className="break-words text-center lg:text-start text-2xl lg:text-5xl font-light">

@@ -8,7 +8,7 @@ import Consultation from "../../components/Consultation";
 import { useWindowSize } from "../../hooks/useWindowsize";
 
 const Catalog = () => {
-  let [range, setRange] = React.useState({ start: 25, end: 75 });
+  let [range, setRange] = React.useState({ start: 0, end: 100 });
   const { width } = useWindowSize();
   const products = [
     {
