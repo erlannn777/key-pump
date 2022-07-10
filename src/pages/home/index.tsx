@@ -7,6 +7,7 @@ import WeCallYou from "../../components/WeCallYou/WeCallYou";
 import img from "../../img/carouselImg.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import articlImg from "../articles/assets/articleImg.png";
+import Consultation from "../../components/Consultation";
 
 const Home = () => {
   const ref = useRef();
@@ -210,7 +211,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="mx-24">
+      <div className="lg:mx-24 mx-2">
         <Splide
           //@ts-ignore
           ref={ref}
@@ -219,20 +220,20 @@ const Home = () => {
             perPage: 1,
             perMove: 1,
             gap: 20,
-            padding: "3rem",
+            padding: "0rem",
             pagination: false,
             breakpoints: {
               623: {
-                perPage: 2,
-                perMove: 2,
+                perPage: 1,
+                perMove: 1,
               },
               935: {
-                perPage: 3,
-                perMove: 3,
+                perPage: 1,
+                perMove: 1,
               },
               1247: {
-                perPage: 4,
-                perMove: 4,
+                perPage: 1,
+                perMove: 1,
               },
             },
           }}
@@ -252,7 +253,10 @@ const Home = () => {
         >
           {products.length > 0
             ? products.map((item, index) => (
-                <SplideSlide key={index} className="w-full flex justify-around">
+                <SplideSlide
+                  key={index}
+                  className="w-full block lg:flex justify-around"
+                >
                   <div className="w-96 flex justify-center">
                     <img className="w-96 h-96" src={img} alt="" />
                   </div>
@@ -270,11 +274,11 @@ const Home = () => {
             : null}
         </Splide>
         <div className="my-8">
-          <div className="break-words text-5xl font-light">
+          <div className="break-words text-center lg:text-start text-2xl lg:text-5xl font-light">
             Почему в качестве источника тепла или холода нужно выбрать тепловой
             насос?
           </div>
-          <div className="w-full flex justify-around">
+          <div className="w-full block lg:flex justify-around">
             {advantages.map((item, index) => (
               <div
                 key={index}
@@ -286,9 +290,14 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="w-full flex justify-between">
+        <div className="w-full lg:flex justify-between">
           <div className="flex flex-col">
-            <div className="text-3xl font-light">Преимущества</div>
+            <div className="text-3xl font-light text-center lg:text-start">
+              Преимущества
+            </div>
+            <div className="w-full block lg:hidden">
+              <img className="w-96 h-96" src={img} alt="" />
+            </div>
             <p className="opacity-70 my-4 break-words">
               Электрический котел забирает столько же энергии, сколько выдает
               тепла. Тепловой насос, наоборот, тратит минимум электроэнергии, а
@@ -313,14 +322,14 @@ const Home = () => {
               Долговечность
             </label>
           </div>
-          <div className="w-full">
+          <div className="w-full hidden lg:block">
             <img className="w-96 h-96" src={img} alt="" />
           </div>
         </div>
         <div className="my-2">
-          <span className="text-3xl font-medium m-12">
+          <div className="text-2xl lg:text-3xl font-normal  text-center ">
             Наши популярные продукты
-          </span>
+          </div>
           <Splide
             //@ts-ignore
             ref={ref}
@@ -333,16 +342,16 @@ const Home = () => {
               pagination: false,
               breakpoints: {
                 623: {
-                  perPage: 2,
-                  perMove: 2,
+                  perPage: 1,
+                  perMove: 1,
                 },
                 935: {
-                  perPage: 3,
-                  perMove: 3,
+                  perPage: 2,
+                  perMove: 1,
                 },
                 1247: {
-                  perPage: 4,
-                  perMove: 4,
+                  perPage: 3,
+                  perMove: 1,
                 },
               },
             }}
@@ -401,7 +410,7 @@ const Home = () => {
           </Splide>
         </div>
         <div className="my-2">
-          <span className="text-3xl font-medium m-12">Статьи</span>
+          <span className="text-2xl lg:text-3xl font-normal m-12">Статьи</span>
           <Splide
             //@ts-ignore
             ref={ref}
@@ -414,16 +423,16 @@ const Home = () => {
               pagination: false,
               breakpoints: {
                 623: {
-                  perPage: 2,
-                  perMove: 2,
+                  perPage: 1,
+                  perMove: 1,
                 },
                 935: {
-                  perPage: 3,
-                  perMove: 3,
+                  perPage: 2,
+                  perMove: 1,
                 },
                 1247: {
-                  perPage: 4,
-                  perMove: 4,
+                  perPage: 2,
+                  perMove: 1,
                 },
               },
             }}
@@ -465,30 +474,7 @@ const Home = () => {
         {/* <PopProd pops={pops} /> */}
         {/* <Articles /> */}
       </div>
-      <div className="w-full flex flex-col items-center text-center py-12 bg-slate-100">
-        <span className="text-3xl font-bold">Мы Вам перезвоним</span>
-        <p className="text-sm">
-          Если у вас возникли какие-то вопросы или проблемы, заполните форму и
-          мы Вам перезвоним.
-        </p>
-        <form className="flex">
-          <div className="flex px-2 py-4 sm:block">
-            <input
-              type="text"
-              placeholder="Ваше имя"
-              required
-              className="m-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-            />
-            <input
-              type="text"
-              placeholder="Ваш Email"
-              required
-              className="m-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-            />
-            <button className="bg-yellow-400 px-4 sm:py-1">Отправить</button>
-          </div>
-        </form>
-      </div>
+      <Consultation />
     </>
   );
 };

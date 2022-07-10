@@ -74,7 +74,7 @@ export default function Carousel() {
 
   return (
     <div className="my-2">
-      <span className="text-3xl font-medium m-12">Вы недавно просмотрели</span>
+      <span className="text-3xl font-medium ">Вы недавно просмотрели</span>
       <Splide
         //@ts-ignore
         ref={ref}
@@ -87,16 +87,16 @@ export default function Carousel() {
           pagination: false,
           breakpoints: {
             623: {
-              perPage: 2,
-              perMove: 2,
+              perPage: 1,
+              perMove: 1,
             },
             935: {
-              perPage: 3,
-              perMove: 3,
+              perPage: 1,
+              perMove: 1,
             },
             1247: {
               perPage: 4,
-              perMove: 4,
+              perMove: 1,
             },
           },
         }}
