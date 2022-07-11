@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import articlImg from "./assets/articleImg.png";
 
 const Articles = () => {
@@ -26,9 +27,12 @@ const Articles = () => {
                   <span className="text-sm">СОЛНЕЧНЫЕ КОЛЛЕКТОРЫ</span>
                   <span className="text-sm">9 апреля 2022</span>
                 </div>
-                <button className="bg-orange-400 px-8 py-1 text-sm">
+                <Link
+                  to="/articles/1"
+                  className="bg-orange-400 px-8 py-1 text-sm"
+                >
                   ДАЛЕЕ
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -49,9 +53,12 @@ const Articles = () => {
                   <span className="text-sm">СОЛНЕЧНЫЕ КОЛЛЕКТОРЫ</span>
                   <span className="text-sm">9 апреля 2022</span>
                 </div>
-                <button className="bg-orange-400 px-8 py-1 text-sm">
+                <Link
+                  to="/articles/1"
+                  className="bg-orange-400 px-8 py-1 text-sm"
+                >
                   ДАЛЕЕ
-                </button>
+                </Link>
               </div>
             </div>
           </div>

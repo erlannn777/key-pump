@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img from "./assets/img.png";
 
 const Article = () => {
@@ -39,9 +40,12 @@ const Article = () => {
             раза.
           </p>
           <div className="w-full flex justify-center">
-            <button className="bg-orange-400 px-4 py-2 text-black mt-4">
+            <Link
+              to="/catalog"
+              className="bg-orange-400 px-4 py-2 text-black mt-4"
+            >
               Перейти в каталог
-            </button>
+            </Link>
           </div>
         </div>
       </div>

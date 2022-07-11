@@ -98,12 +98,18 @@ const Product = () => {
             </div>
             <div className="text-2xl font-medium my-2 mt-12">283 000₽</div>
             <div className="flex justify-between mt-24">
-              <button className="bg-orange-400 py-2 text-white px-7 w-2/5">
+              <Link
+                className="bg-orange-400 py-2 text-white px-7 w-2/5 text-center"
+                to="/checkout"
+              >
                 Купить
-              </button>
-              <button className="bg-slate-500 py-2 text-white px-7 w-2/5">
+              </Link>
+              <Link
+                to="/checkout"
+                className="bg-slate-500 py-2 text-white px-7 w-2/5 text-center"
+              >
                 Быстрая покупка
-              </button>
+              </Link>
             </div>
             <div className="accordion flex flex-col  justify-center w-full mt-12">
               <div className="w-full ">

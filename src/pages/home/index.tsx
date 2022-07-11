@@ -8,6 +8,7 @@ import img from "../../img/carouselImg.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import articlImg from "../articles/assets/articleImg.png";
 import Consultation from "../../components/Consultation";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const ref = useRef();
@@ -261,7 +262,9 @@ const Home = () => {
                     <img className="w-96 h-96" src={img} alt="" />
                   </div>
                   <div className="p-2 w-96 ">
-                    <p className="break-words text-2xl">{item.title}</p>
+                    <Link to="/product">
+                      <p className="break-words text-2xl">{item.title}</p>
+                    </Link>
                     <p className="my-4 opacity-60">{item.desc}</p>
                     <div className="text-sm opacity-60">Цена</div>
                     <div className="my-4 text-xl">245 000₽</div>
@@ -401,7 +404,10 @@ const Home = () => {
                       <img className="w-96 h-full" src={img} alt="" />
                     </div>
                     <div className="p-2">
-                      <span className="break-all">{item.title}</span>
+                      <Link to="/product">
+                        {" "}
+                        <span className="break-all">{item.title}</span>
+                      </Link>
                       <div className="w-full flex justify-between items-center">
                         <span>{item.price}</span>
                       </div>
@@ -458,7 +464,9 @@ const Home = () => {
                     <img className="w-full h-60" src={item.img} alt="" />
                     <div className="w-full p-2">
                       <div className="w-full text-center">
-                        <span className="font-bold">{item.title}</span>
+                        <Link to="/articles/1">
+                          <span className="font-bold">{item.title}</span>
+                        </Link>
                       </div>
                       <div className="w-full flex justify-between items-center">
                         <div className="flex flex-col">

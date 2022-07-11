@@ -113,7 +113,10 @@ const Sidebar = () => {
                   </div> */}
                 </div>
 
-                <div className="w-full flex flex-col mt-6 p-4 outline-hidden">
+                <div
+                  onClick={() => setOpen(false)}
+                  className="w-full flex flex-col mt-6 p-4 outline-hidden"
+                >
                   <Link
                     to="/"
                     className="block mt-4 lg:inline-block lg:mt-0  hover:text-orange-400 mr-4 "

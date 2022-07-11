@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import img from "../../img/catalog.png";
+import { Link } from "react-router-dom";
 
 export default function Carousel() {
   const ref = useRef();
@@ -146,7 +147,10 @@ export default function Carousel() {
                   <img className="w-96 h-full" src={img} alt="" />
                 </div>
                 <div className="p-2">
-                  <span className="break-all">{item.title}</span>
+                  <Link to="/product">
+                    {" "}
+                    <span className="break-all">{item.title}</span>
+                  </Link>
                   <div className="w-full flex justify-between items-center">
                     <span>{item.price}</span>
                     {/* <div className="p-2 bg-yellow-500">
