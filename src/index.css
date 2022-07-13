@@ -149,11 +149,11 @@ code {
   background-color: #e9ecef;
 }
 
-ul {
+.ul {
   list-style-type: none !important;
 }
 
-ul li::before {
+.ul li::before {
   content: "\2022";
   margin: 1rem;
   color: #f6ab3a;

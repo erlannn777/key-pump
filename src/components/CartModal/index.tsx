@@ -96,11 +96,10 @@ const CartModal = () => {
                   <span>Итого: 460 000₽</span>
                 </div>
                 <div className="w-full flex justify-between">
-                  <Link
-                    className="bg-amber-400 p-1 border outline-hidden"
-                    to="/checkout"
-                  >
-                    Оформить заказ
+                  <Link to="/checkout">
+                    <button className="bg-amber-400 p-1 border outline-hidden text-white">
+                      Оформить заказ
+                    </button>
                   </Link>
                   <button className="border border-amber-400 p-1">
                     Продолжить покупки

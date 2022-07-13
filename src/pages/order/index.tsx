@@ -125,7 +125,7 @@ const Order = () => {
             На все товары, приобретенные в нашем магазине, предоставляется
             гарантия, дающая право на:
           </span>
-          <ul className="list-disc">
+          <ul className="list-disc ul">
             <li className="py-2 text-gray-600 text-base">
               обмен или возврат товара в срок до 14 дней с момента приобретения;
             </li>
@@ -143,7 +143,7 @@ const Order = () => {
           <span className="text-xl pb-2">
             Подготовьте, пожалуйста, все необходимые документы:
           </span>
-          <ul className="list-disc">
+          <ul className="list-disc ul">
             <li className="py-2 text-gray-600 text-base">
               выданный продавцом расчетный документ (чек / акт приема-передачи /
               накладная или др.), подтверждающий факт приобретения;

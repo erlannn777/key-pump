@@ -113,11 +113,9 @@ const Sidebar = () => {
                   </div> */}
                 </div>
 
-                <div
-                  onClick={() => setOpen(false)}
-                  className="w-full flex flex-col mt-6 p-4 outline-hidden"
-                >
+                <div className="w-full flex flex-col mt-6 p-4 outline-hidden">
                   <Link
+                    onClick={() => setOpen(false)}
                     to="/"
                     className="block mt-4 lg:inline-block lg:mt-0  hover:text-orange-400 mr-4 "
                   >
@@ -140,6 +138,7 @@ const Sidebar = () => {
                         <div className="flex w-[375px]">
                           <ul className="">
                             <Link
+                              onClick={() => setOpen(false)}
                               to="/catalog"
                               className="
                     hover:bg-gray-200
@@ -151,30 +150,36 @@ const Sidebar = () => {
                               Солнечные коллекторы
                             </Link>
                             <Link
+                              onClick={() => setOpen(false)}
                               to="/catalog"
                               className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
                             >
                               Баки и водонагреватели
                             </Link>
                             <Link
+                              onClick={() => setOpen(false)}
                               to="/catalog"
                               className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
                             >
                               Поверхностное охлаждение
                             </Link>
                             <Link
+                              onClick={() => setOpen(false)}
                               to="/catalog"
                               className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
                             >
                               Стабилизаторы, солнечные батареи
                             </Link>{" "}
-                            {/* <Link to="/catalog" className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">
+                            {/* <Link
+                            onClick={() => setOpen(false)} to="/catalog" className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">
                         Лоссы и кессоны
                       </Link>{" "}
-                      <Link to="/catalog" className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">
+                      <Link
+                      onClick={() => setOpen(false)} to="/catalog" className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">
                         Дополнительное гетермальное оборудование
                       </Link>
-                      <Link to="/catalog" className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">
+                      <Link
+                      onClick={() => setOpen(false)} to="/catalog" className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">
                         Монтажные и сервисные услуги
                       </Link> */}
                           </ul>
@@ -185,6 +190,7 @@ const Sidebar = () => {
                   <div className="w-full border border-gray mt-2"></div>
 
                   <Link
+                    onClick={() => setOpen(false)}
                     to="/about-us"
                     className="block mt-4 lg:inline-block lg:mt-0  hover:text-orange-400 mr-4"
                   >
@@ -208,6 +214,7 @@ const Sidebar = () => {
                         <div className="w-44">
                           <ul className="">
                             <Link
+                              onClick={() => setOpen(false)}
                               to="/faq"
                               className="
                     hover:bg-gray-200
@@ -219,12 +226,14 @@ const Sidebar = () => {
                               FAQ Вопрос - ответ
                             </Link>
                             <Link
+                              onClick={() => setOpen(false)}
                               to="/order"
                               className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
                             >
                               Доставка и оплата
                             </Link>
                             <Link
+                              onClick={() => setOpen(false)}
                               to="/articles"
                               className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
                             >
