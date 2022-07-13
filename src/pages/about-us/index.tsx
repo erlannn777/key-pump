@@ -44,8 +44,11 @@ const AboutUs = () => {
           </h2>
         </div>
         <div className="flex flex-col items-center">
-          <div className="w-full lg:flex justify-between items-center block">
-            <img className="object-contain w-80 h-96" src={firstImg} alt="" />
+          <div className="w-full md:flex justify-between items-center block">
+            <div className="w-full flex justify-center">
+              {" "}
+              <img className="object-contain w-80 h-96" src={firstImg} alt="" />
+            </div>
             <div className="lg:w-1/2 w-full">
               <div className="my-4">
                 <span className="text-3xl">Компания</span>

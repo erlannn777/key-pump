@@ -70,24 +70,27 @@ const Header = () => {
             </div>
             <Link
               to="/"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-400 mr-4"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-400"
             >
               Главная
             </Link>
-            <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-400 mr-4 flex">
+            <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-400  flex">
               <div className="dropdown inline-block relative ml-2">
                 <span className="flex">
                   Каталог
-                  <svg
-                    className="fill-current h-4 w-4 mt-1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
+                  <div className="iconHidden hidden w-4 ml-0.5 mt-1">^</div>
+                  <span>
+                    <svg
+                      className="fill-current h-4 w-4 mt-1 iconBlock"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </span>
                 </span>
                 <div className="dropdown-menu absolute z-50 hidden text-gray-700 pt-1 bg-white">
-                  <div className="flex w-[375px]">
+                  <div className="flex w-[375px] lg:w-[790px]">
                     <ul className="">
                       <Link
                         to="/catalog"
@@ -145,16 +148,19 @@ const Header = () => {
               <div className="dropdown inline-block relative ml-2">
                 <span className="flex">
                   Ещё
-                  <svg
-                    className="fill-current h-4 w-4 mt-1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
+                  <div className="iconHidden hidden w-4 ml-0.5 mt-1">^</div>
+                  <span className="iconBlock">
+                    <svg
+                      className="fill-current h-4 w-4 mt-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </span>
                 </span>
                 <div className="dropdown-menu absolute z-50 hidden text-gray-700 pt-1 bg-white">
-                  <div className="w-44">
+                  <div className="w-44 lg:w-[590px]">
                     <ul className="">
                       <Link
                         to="/faq"

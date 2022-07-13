@@ -1,10 +1,14 @@
 import React, { useRef, useState } from "react";
-import Slider from "./slider";
-import Why from "./Why";
 import PopProd from "../../components/popProd";
 import Articles from "../../components/Articles/Articles";
 import WeCallYou from "../../components/WeCallYou/WeCallYou";
 import img from "../../img/carouselImg.png";
+import advantagesImg from "./assets/advantages.png";
+import carouselImg from "./assets/carouselImg.png";
+import category1Img from "./assets/category1.png";
+import category2Img from "./assets/category2.png";
+import category3Img from "./assets/category3.png";
+import category4Img from "./assets/category4.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import articlImg from "../articles/assets/articleImg.png";
 import Consultation from "../../components/Consultation";
@@ -16,21 +20,18 @@ const Home = () => {
     {
       title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
       price: "1000000",
-      oldPrice: 37000,
       img: img,
       desc: "Геотермальный тепловой насос SILA GM-10 S (H) предназначен для использования в системах отопления и горячего водоснабжения...",
     },
     {
       title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
       price: "1000000",
-      oldPrice: 37000,
       img: img,
       desc: "Геотермальный тепловой насос SILA GM-10 S (H) предназначен для использования в системах отопления и горячего водоснабжения...",
     },
     {
       title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
       price: "1000000",
-      oldPrice: 37000,
       img: img,
       desc: "Геотермальный тепловой насос SILA GM-10 S (H) предназначен для использования в системах отопления и горячего водоснабжения...",
     },
@@ -112,68 +113,44 @@ const Home = () => {
 
   const popular = [
     {
-      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
-      price: "1000000",
-      oldPrice: 37000,
-      img: img,
-      avaible: true,
-      counted: false,
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      price: "33 000",
+      img: carouselImg,
     },
     {
-      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
-      price: "1000000",
-      oldPrice: 37000,
-      img: img,
-      avaible: true,
-      counted: false,
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      price: "33 000",
+      img: carouselImg,
     },
     {
-      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
-      price: "1000000",
-      oldPrice: 37000,
-      img: img,
-      avaible: true,
-      counted: false,
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      price: "33 000",
+      img: carouselImg,
     },
     {
-      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
-      price: "1000000",
-      oldPrice: 37000,
-      img: img,
-      avaible: true,
-      counted: false,
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      price: "33 000",
+      img: carouselImg,
     },
     {
-      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
-      price: "1000000",
-      oldPrice: 37000,
-      img: img,
-      avaible: true,
-      counted: false,
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      price: "33 000",
+      img: carouselImg,
     },
     {
-      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
-      price: "1000000",
-      oldPrice: 37000,
-      img: img,
-      avaible: true,
-      counted: false,
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      price: "33 000",
+      img: carouselImg,
     },
     {
-      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
-      price: "1000000",
-      oldPrice: 37000,
-      img: img,
-      avaible: true,
-      counted: false,
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      price: "33 000",
+      img: carouselImg,
     },
     {
-      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
-      price: "1000000",
-      oldPrice: 37000,
-      img: img,
-      avaible: true,
-      counted: false,
+      title: "ТЕПЛОВОЙ НАСОС ДЛЯ БАССЕЙНА SILA AM-07 IS (HC)",
+      price: "33 000",
+      img: carouselImg,
     },
   ];
 
@@ -256,14 +233,20 @@ const Home = () => {
             ? products.map((item, index) => (
                 <SplideSlide
                   key={index}
-                  className="w-full block lg:flex justify-around"
+                  className="w-full block flex justify-center md:flex-row flex-col items-center"
                 >
-                  <div className="w-96 flex justify-center">
-                    <img className="w-96 h-96" src={img} alt="" />
-                  </div>
+                  <Link to="/product" className="w-96 flex justify-center">
+                    <img
+                      className="w-96 h-96 hover:opacity-60"
+                      src={img}
+                      alt=""
+                    />
+                  </Link>
                   <div className="p-2 w-96 ">
                     <Link to="/product">
-                      <p className="break-words text-2xl">{item.title}</p>
+                      <p className="break-words text-2xl hover:text-orange-400">
+                        {item.title}
+                      </p>
                     </Link>
                     <p className="my-4 opacity-60">{item.desc}</p>
                     <div className="text-sm opacity-60">Цена</div>
@@ -285,51 +268,111 @@ const Home = () => {
             Почему в качестве источника тепла или холода нужно выбрать тепловой
             насос?
           </div>
-          <div className="w-full block lg:flex justify-around">
+          <div className="w-full  flex lg:justify-around md:flex-row flex-col items-center">
             {advantages.map((item, index) => (
               <div
                 key={index}
                 className="w-80 border-b-2 border-t-2 border-gray flex flex-col items-center m-8 p-4 text-center"
               >
                 {item.vector}
-                <p>{item.label}</p>
+                <p className="font-light">{item.label}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="w-full lg:flex justify-between">
+        <div className="w-full lg:flex justify-between my-3">
           <div className="flex flex-col">
             <div className="text-3xl font-light text-center lg:text-start">
               Преимущества
             </div>
-            <div className="w-full block lg:hidden">
-              <img className="w-96 h-96" src={img} alt="" />
+            <div className="w-full flex justify-center  block lg:hidden my-3">
+              <img className="w-96 h-96" src={advantagesImg} alt="" />
             </div>
-            <p className="opacity-70 my-4 break-words">
+            <p className="opacity-70 my-4 break-words lg:max-w-3xl text-base">
               Электрический котел забирает столько же энергии, сколько выдает
               тепла. Тепловой насос, наоборот, тратит минимум электроэнергии, а
               тепла производит в три-семь раз больше. Оборудование может
               потратить 5 кВт/ч, однако тепла оно выделяет не менее 17 кВт/ч.
               Высокий КПД — самое привлекательное качество тепловых котлов.
             </p>
-            <label className="m-2">
+            <label className="m-2 lg:mt-12 custom-checkbox">
               <input className="m-1" type="checkbox" checked={true} />
-              Возможность установки в любой местности
+              <span> Возможность установки в любой местности</span>
             </label>
-            <label className="m-2">
+            <label className="m-2 custom-checkbox">
               <input className="m-1" type="checkbox" checked={true} />
-              Универсальность. Зимой они обеспечивают тепло, летом прохладу
+              <span>
+                {" "}
+                Универсальность. Зимой они обеспечивают тепло, летом прохладу
+              </span>
             </label>
-            <label className="m-2">
+            <label className="m-2 custom-checkbox">
               <input className="m-1" type="checkbox" checked={true} />
-              Безопасность для окружающей среды
+              <span> Безопасность для окружающей среды</span>
             </label>
-            <label className="m-2">
+            <label className="m-2 custom-checkbox">
               <input className="m-1" type="checkbox" checked={true} />
-              Долговечность
+              <span> Долговечность</span>
             </label>
           </div>
-          <img className="w-96 h-96 hidden lg:block" src={img} alt="" />
+          <div className="p-4  justify-center align-center pattern hidden lg:flex">
+            <img
+              className="w-96 h-96 hidden lg:block"
+              src={advantagesImg}
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div className="w-full my-4">
+          <div className="w-full text-center font-bold text-3xl">Категории</div>
+          <div className="flex justify-between">
+            <div className="w-1/2 p-4 ">
+              <img src={category1Img} alt="" />
+              <div className="w-full p-2 bg-slate-50">
+                <div className="text-xl font-normal">ТЕПЛОВЫЕ НАСОСЫ</div>
+                <button className="hidden sm:block px-12 py-2  border border-gray-500">
+                  Перейти
+                </button>
+              </div>
+            </div>
+            <div className="w-1/2 p-4 ">
+              <img src={category2Img} alt="" />
+              <div className="w-full p-2 bg-slate-50">
+                <div className="text-xl font-normal">СОЛНЕЧНЫЕ КОЛЛЕКТОРЫ</div>
+                <button className="hidden sm:block px-12 py-2  border border-gray-500">
+                  Перейти
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <div className="w-1/2 p-4 ">
+              <img src={category3Img} alt="" />
+              <div className="w-full p-2 bg-slate-50">
+                <div className="text-xl font-normal">
+                  ПОВЕРХНОСТНОЕ ОТОПЛЕНИЕ
+                </div>
+                <button className="hidden sm:block px-12 py-2  border border-gray-500">
+                  Перейти
+                </button>
+              </div>
+            </div>
+            <div className="w-1/2 p-4 ">
+              <img src={category4Img} alt="" />
+              <div className="w-full p-2 bg-slate-50">
+                <div className="text-xl font-normal">
+                  ПОВЕРХНОСТНОЕ ОХЛАЖДЕНИЕ
+                </div>
+                <button className="hidden sm:block px-12 py-2  border border-gray-500">
+                  Перейти
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex justify-center">
+            <button className="bg-orange-400 px-12 py-2 ">Все категории</button>
+          </div>
         </div>
         <div className="my-2">
           <div className="text-2xl lg:text-3xl font-normal  text-center ">
@@ -378,10 +421,10 @@ const Home = () => {
               ? popular.map((item, index) => (
                   <SplideSlide
                     key={index}
-                    className="w-72 h-96 border border-gray flex flex-col m-1"
+                    className="w-72  border border-gray flex flex-col m-1"
                   >
-                    <div className="w-full h-80 relative">
-                      <div className="absolute flex justify-between p-2">
+                    <div className="w-full h-80  bg-slate-100">
+                      <div className="relative flex justify-between p-2">
                         <div className="flex col-span-2 align-middle gap-2">
                           <svg
                             width="20"
@@ -401,12 +444,20 @@ const Home = () => {
                           <p>В наличии</p>
                         </div>
                       </div>
-                      <img className="w-96 h-full" src={img} alt="" />
+                      <Link to="/product">
+                        <img
+                          className="w-80 h-72 object-contain hover:opacity-60"
+                          src={item.img}
+                          alt=""
+                        />
+                      </Link>
                     </div>
                     <div className="p-2">
                       <Link to="/product">
                         {" "}
-                        <span className="break-all">{item.title}</span>
+                        <span className="break-all hover:text-orange-400 text-slate-600">
+                          {item.title}
+                        </span>
                       </Link>
                       <div className="w-full flex justify-between items-center">
                         <span>{item.price}</span>
@@ -461,17 +512,29 @@ const Home = () => {
             {articles.length > 0
               ? articles.map((item, index) => (
                   <SplideSlide key={index} className="w-96 bg-slate-100 m-5  ">
-                    <img className="w-full h-60" src={item.img} alt="" />
+                    <Link to="/product">
+                      <img
+                        className="w-full h-60 hover:opacity-60"
+                        src={item.img}
+                        alt=""
+                      />
+                    </Link>
                     <div className="w-full p-2">
                       <div className="w-full text-center">
                         <Link to="/articles/1">
-                          <span className="font-bold">{item.title}</span>
+                          <span className="font-bold hover:text-orange-400">
+                            {item.title}
+                          </span>
                         </Link>
                       </div>
                       <div className="w-full flex justify-between items-center">
                         <div className="flex flex-col">
-                          <span className="text-sm">{item.desc}</span>
-                          <span className="text-sm">{item.date}</span>
+                          <span className="text-sm text-slate-600">
+                            {item.desc}
+                          </span>
+                          <span className="text-sm text-slate-600">
+                            {item.date}
+                          </span>
                         </div>
                       </div>
                     </div>

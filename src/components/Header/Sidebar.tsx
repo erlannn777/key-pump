@@ -124,7 +124,7 @@ const Sidebar = () => {
                     Главная
                   </Link>
                   <div className="w-full border border-gray mt-2"></div>
-                  <li className="block mt-4 lg:inline-block lg:mt-0  hover:text-orange-400 mr-4 flex">
+                  <li className="block mt-4 lg:block lg:mt-0  hover:text-orange-400 mr-4 flex">
                     <div className="dropdown inline-block relative">
                       <span className="flex">
                         Каталог

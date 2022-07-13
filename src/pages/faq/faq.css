@@ -6,7 +6,7 @@
 }
 
 input:checked + .label-faq:after {
-  content: "-";
+  content: "+";
   line-height: 0.8em;
 }
 

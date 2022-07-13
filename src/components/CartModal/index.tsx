@@ -46,7 +46,7 @@ const CartModal = () => {
             leaveFrom="opacity-100 transform scale-100"
             leaveTo="opacity-0 transform scale-95 "
           >
-            <div className="p-7  bg-white  inline-block align-center align-middle rounded-xl  border-2 border-gray  text-center overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle ">
+            <div className="p-7  bg-white  inline-block align-center align-middle rounded  border-2 border-gray  text-center overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle ">
               <div className=" w-full flex justify-between">
                 <span>Корзина</span>
                 <svg

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import img from "../../img/catalog.png";
+import img from "../../pages/home/assets/carouselImg.png";
 import { Link } from "react-router-dom";
 
 export default function Carousel() {
@@ -121,10 +121,10 @@ export default function Carousel() {
           ? products.map((item, index) => (
               <SplideSlide
                 key={index}
-                className="w-72 h-96 border border-gray flex flex-col m-1"
+                className="w-72 border border-gray flex flex-col m-1"
               >
-                <div className="w-full h-80 relative">
-                  <div className="absolute flex justify-between p-2">
+                <div className="w-full h-80  bg-slate-100">
+                  <div className="relative flex justify-between p-2">
                     <div className="flex col-span-2 align-middle gap-2">
                       <svg
                         width="20"
@@ -144,18 +144,23 @@ export default function Carousel() {
                       <p>В наличии</p>
                     </div>
                   </div>
-                  <img className="w-96 h-full" src={img} alt="" />
+                  <Link to="/product">
+                    <img
+                      className="w-80 h-72 object-contain hover:opacity-60"
+                      src={item.img}
+                      alt=""
+                    />
+                  </Link>
                 </div>
                 <div className="p-2">
                   <Link to="/product">
                     {" "}
-                    <span className="break-all">{item.title}</span>
+                    <span className="break-all hover:text-orange-400 text-slate-600">
+                      {item.title}
+                    </span>
                   </Link>
                   <div className="w-full flex justify-between items-center">
                     <span>{item.price}</span>
-                    {/* <div className="p-2 bg-yellow-500">
-                      <AiOutlineShoppingCart />
-                    </div> */}
                   </div>
                 </div>
               </SplideSlide>

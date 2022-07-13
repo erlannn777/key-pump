@@ -78,7 +78,7 @@ const Catalog = () => {
             htmlFor="panel-999"
             className={`${
               width < 1024
-                ? "label-faq  relative block  text-black p-4 shadow m-2 bg-gray-100"
+                ? "label-faq  relative block  text-black p-4 shadow "
                 : "hidden"
             }`}
           >
@@ -116,147 +116,178 @@ const Catalog = () => {
                 </div>
                 <div className="border border-gray w-full p-2 mt-2">
                   <div className="">
-                    <div>Фильтр</div>
-                    <div>Цена</div>
-                    <div className="flex justify-between">
-                      <div className="p-2 border border-gray w-5/12">
-                        {range.start}
-                      </div>
-                      <div className="p-2 border border-gray w-5/12">
-                        {range.end}
-                      </div>
-                    </div>
-                    <div className="w-full flex justify-center mt-4">
-                      <Provider theme={defaultTheme}>
-                        <RangeSlider
-                          width="333px"
-                          value={range}
-                          onChange={setRange}
+                    <div className="font-medium text-xl	ml-4 my-5">Фильтр</div>
+                    <div className="accordion flex flex-col  justify-center w-full">
+                      <div className="w-full ">
+                        <input
+                          type="checkbox"
+                          name="panel"
+                          id="panel-0"
+                          className="hidden"
                         />
-                      </Provider>
-                    </div>
-                  </div>
-                  <div className="border border-gray w-full my-4"></div>
-                  <div className="accordion flex flex-col  justify-center w-full">
-                    <div className="w-full ">
-                      <input
-                        type="checkbox"
-                        name="panel"
-                        id="panel-1"
-                        className="hidden"
-                      />
-                      <label
-                        htmlFor="panel-1"
-                        className=" label-faq relative block text-black p-4 shadow  bg-gray-100"
-                      >
-                        Особенность
-                      </label>
-                      <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all">
-                            {" "}
-                            Геотермальные тепловые насосы (65)
-                          </span>
+                        <label
+                          htmlFor="panel-0"
+                          className=" label-faq relative block text-black p-4 shadow font-normal	"
+                        >
+                          Цена
                         </label>
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all">
-                            {" "}
-                            Вентеляционные тепловые насосы (15)
-                          </span>
-                        </label>
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all">
-                            {" "}
-                            Тепловые насосы воздух/вода (45)
-                          </span>
-                        </label>
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all">
-                            {" "}
-                            Доп. оборудование и аксессуары (31)
-                          </span>
-                        </label>
+                        <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
+                          <div className="flex justify-between mt-4">
+                            <div className="p-2 border border-gray w-5/12">
+                              {range.start}
+                            </div>
+                            <div className="p-2 border border-gray w-5/12">
+                              {range.end}
+                            </div>
+                          </div>
+                          <div className="w-full flex justify-center mt-4">
+                            <Provider theme={defaultTheme}>
+                              <RangeSlider
+                                width="333px"
+                                value={range}
+                                onChange={setRange}
+                              />
+                            </Provider>
+                          </div>
+                        </div>
+                        <div className="border border-gray w-full my-4"></div>
                       </div>
-                      <div className="border border-gray w-full my-4"></div>
-                    </div>
-                    <div className="w-full ">
-                      <input
-                        type="checkbox"
-                        name="panel"
-                        id="panel-2"
-                        className="hidden"
-                      />
-                      <label
-                        htmlFor="panel-2"
-                        className=" label-faq relative block text-black p-4 shadow  bg-gray-100"
-                      >
-                        Бренд
-                      </label>
-                      <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all"> Sila (15)</span>
+
+                      <div className="w-full ">
+                        <input
+                          type="checkbox"
+                          name="panel"
+                          id="panel-1"
+                          className="hidden"
+                        />
+                        <label
+                          htmlFor="panel-1"
+                          className=" label-faq relative block text-black p-4 shadow font-normal	"
+                        >
+                          Особенность
                         </label>
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all">Nibe (22)</span>
-                        </label>
+                        <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              {" "}
+                              Геотермальные тепловые насосы (65)
+                            </span>
+                          </label>
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              {" "}
+                              Вентеляционные тепловые насосы (15)
+                            </span>
+                          </label>
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              {" "}
+                              Тепловые насосы воздух/вода (45)
+                            </span>
+                          </label>
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              {" "}
+                              Доп. оборудование и аксессуары (31)
+                            </span>
+                          </label>
+                        </div>
+                        <div className="border border-gray w-full my-4"></div>
                       </div>
-                      <div className="border border-gray w-full my-4"></div>
-                    </div>
-                    <div className="w-full ">
-                      <input
-                        type="checkbox"
-                        name="panel"
-                        id="panel-3"
-                        className="hidden"
-                      />
-                      <label
-                        htmlFor="panel-3"
-                        className=" label-faq relative block text-black p-4 shadow  bg-gray-100"
-                      >
-                        Мощность нагрева
-                      </label>
-                      <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all"> Sila (15)</span>
+                      <div className="w-full ">
+                        <input
+                          type="checkbox"
+                          name="panel"
+                          id="panel-2"
+                          className="hidden"
+                        />
+                        <label
+                          htmlFor="panel-2"
+                          className=" label-faq relative block text-black p-4 shadow font-normal	"
+                        >
+                          Бренд
                         </label>
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all">Nibe (22)</span>
-                        </label>
+                        <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              {" "}
+                              Sila (15)
+                            </span>
+                          </label>
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              Nibe (22)
+                            </span>
+                          </label>
+                        </div>
+                        <div className="border border-gray w-full my-4"></div>
                       </div>
-                      <div className="border border-gray w-full my-4"></div>
-                    </div>
-                    <div className="w-full ">
-                      <input
-                        type="checkbox"
-                        name="panel"
-                        id="panel-4"
-                        className="hidden"
-                      />
-                      <label
-                        htmlFor="panel-4"
-                        className=" label-faq relative block text-black p-4 shadow  bg-gray-100"
-                      >
-                        Размеры
-                      </label>
-                      <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all"> Sila (15)</span>
+                      <div className="w-full ">
+                        <input
+                          type="checkbox"
+                          name="panel"
+                          id="panel-3"
+                          className="hidden"
+                        />
+                        <label
+                          htmlFor="panel-3"
+                          className=" label-faq relative block text-black p-4 shadow font-normal	"
+                        >
+                          Мощность нагрева
                         </label>
-                        <label>
-                          <input type="checkbox" />
-                          <span className="p-1 break-all">Nibe (22)</span>
-                        </label>
+                        <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              {" "}
+                              Sila (15)
+                            </span>
+                          </label>
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              Nibe (22)
+                            </span>
+                          </label>
+                        </div>
+                        <div className="border border-gray w-full my-4"></div>
                       </div>
-                      <div className="border border-gray w-full my-4"></div>
+                      <div className="w-full ">
+                        <input
+                          type="checkbox"
+                          name="panel"
+                          id="panel-4"
+                          className="hidden"
+                        />
+                        <label
+                          htmlFor="panel-4"
+                          className=" label-faq relative block text-black p-4 shadow font-normal	"
+                        >
+                          Размеры
+                        </label>
+                        <div className="accordion__content overflow-hidden bg-grey-lighter flex flex-col">
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              {" "}
+                              Sila (15)
+                            </span>
+                          </label>
+                          <label className="custom-checkbox">
+                            <input type="checkbox" />
+                            <span className="p-1 break-all font-light text-base">
+                              Nibe (22)
+                            </span>
+                          </label>
+                        </div>
+                        <div className="border border-gray w-full my-4"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -328,9 +359,9 @@ const Catalog = () => {
             <div className="w-full flex flex-wrap justify-center lg:justify-start">
               {products.length > 0
                 ? products.map((item) => (
-                    <div className="w-72 h-96 border border-gray flex flex-col m-1">
-                      <div className="w-full h-80 relative">
-                        <div className="absolute flex justify-between p-2">
+                    <div className="w-72 border border-gray flex flex-col m-1">
+                      <div className="w-full h-80 bg-slate-100">
+                        <div className=" flex justify-between p-2">
                           <div className="flex col-span-2 align-middle gap-2">
                             <svg
                               width="20"
@@ -347,15 +378,25 @@ const Catalog = () => {
                                 stroke-linejoin="round"
                               />
                             </svg>
-                            <p>В наличии</p>
+                            <p className="text-sm">В наличии</p>
                           </div>
                         </div>
-                        <img className="w-full h-full" src={img} alt="" />
+                        <img
+                          className="w-80 h-72 object-contain"
+                          src={img}
+                          alt=""
+                        />
                       </div>
                       <div className="p-2">
-                        <span className="break-all">{item.title}</span>
+                        <Link to="/product">
+                          <span className="break-all hover:text-orange-400 text-slate-600 font-light">
+                            {item.title}
+                          </span>
+                        </Link>
                         <div className="w-full flex justify-between items-center">
-                          <span>{item.price}</span>
+                          <span className="font-medium text-base">
+                            {item.price}
+                          </span>
                           <div className="p-2 bg-yellow-500">
                             <AiOutlineShoppingCart />
                           </div>
