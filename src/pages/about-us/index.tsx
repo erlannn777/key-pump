@@ -37,7 +37,7 @@ const AboutUs = () => {
   ];
   return (
     <div className="w-full mt-12">
-      <div className="lg:mx-24 m-4">
+      <div className="lg:mx-24">
         <div className="flex items-start justify-start mb-4">
           <h2>
             Главная / <span className="text-gray-400">О нас</span>
@@ -45,9 +45,9 @@ const AboutUs = () => {
         </div>
         <div className="flex flex-col items-center">
           <div className="w-full md:flex justify-between items-center block">
-            <div className="w-full flex justify-center">
+            <div className="lg:w-1/3 flex justify-center pattern p-4">
               {" "}
-              <img className="object-contain w-80 h-96" src={firstImg} alt="" />
+              <img className="object-contain w-96 h-96" src={firstImg} alt="" />
             </div>
             <div className="lg:w-1/2 w-full">
               <div className="my-4">
@@ -67,9 +67,9 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="w-full  items-center block lg:flex">
-            <div className="flex flex-col text-start">
+            <div className="flex flex-col text-start md:max-w-3xl">
               <div className="mr-4">
-                <span className="text-orange-300 underline my-4">О НАС</span>
+                <span className="text-orange-300 underline my-4 ">О НАС</span>
                 <p className="break-words">
                   Продукция предназначена для стран СНГ с учетом всех
                   особенностей тяжелых зим, резких изменений климата,
@@ -82,7 +82,13 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-            <img className="object-contain w-100 h-96" src={secondImg} alt="" />
+            <div className="pattern p-4 lg:w-1/2">
+              <img
+                className="object-contain w-96  h-96"
+                src={secondImg}
+                alt=""
+              />
+            </div>
           </div>
           <div className="flex flex-col mt-8">
             <div className="text-center">
@@ -153,25 +159,27 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="w-full bg-gray-700 flex items-center justify-center flex-col md:flex-row">
-          <div className="m-8 text-center">
-            <span className="text-4xl text-white font-bold">5,567</span>
-            <p className="text-orange-400">Довольных клиентов</p>
-          </div>
-          <div className="m-8 text-center">
-            <span className="text-4xl text-white font-bold">1245</span>
-            <p className="text-orange-400">Продуктов на выбор</p>
-          </div>
-          <div className="m-8 text-center">
-            <span className="text-4xl text-white font-bold">372</span>
-            <p className="text-orange-400">Продаж в день</p>
-          </div>
-          <div className="m-8 text-center">
-            <span className="text-4xl text-white font-bold">20</span>
-            <p className="text-orange-400">Лет на рынке</p>
-          </div>
+      <div className="w-full bg-gray-700 flex items-center justify-center flex-col md:flex-row">
+        <div className="m-8 text-center">
+          <span className="text-4xl text-white font-bold">5,567</span>
+          <p className="text-orange-400">Довольных клиентов</p>
         </div>
+        <div className="m-8 text-center">
+          <span className="text-4xl text-white font-bold">1245</span>
+          <p className="text-orange-400">Продуктов на выбор</p>
+        </div>
+        <div className="m-8 text-center">
+          <span className="text-4xl text-white font-bold">372</span>
+          <p className="text-orange-400">Продаж в день</p>
+        </div>
+        <div className="m-8 text-center">
+          <span className="text-4xl text-white font-bold">20</span>
+          <p className="text-orange-400">Лет на рынке</p>
+        </div>
+      </div>
+      <div className="lg:mx-24">
         <div className="flex flex-col items-center">
           <div className="w-full my-8">
             <Carousel cols={1} rows={1} gap={1}>
@@ -218,7 +226,10 @@ const AboutUs = () => {
           </div>
           <div className="w-full">
             <div className="w-full text-center">
-              <span>Производители, с которыми мы работаем</span>
+              <span className="text-lg text-yellow-600 border-b border-yellow-600 w-96 p-2">
+                {" "}
+                Производители, с которыми мы работаем
+              </span>
             </div>
             <div className="w-full flex flex-wrap justify-center">
               {brands.map((brand: any, index) => (
@@ -231,32 +242,38 @@ const AboutUs = () => {
               <span className=" text-3xl text-orange-400 pb-4">команда</span>
             </div>
             <div className="w-full lg:flex justify-center block">
-              <div className="flex flex-col items-center bg-gray-200 p-2 m-2">
+              <div className="flex flex-col items-center bg-slate-100 m-2 w-80">
                 <img
-                  className="object-contain w-72 h-80"
+                  className="object-contain w-full h-80"
                   src={builder1}
                   alt=""
                 />
-                <span>Специалист по монтажу тепловых насосов</span>
-                <p>Александров П. А.</p>
+                <div className="font-medium text-base break-words text-center">
+                  Специалист по монтажу тепловых насосов
+                </div>
+                <p className="font-light">Александров П. А.</p>
               </div>
-              <div className="flex flex-col items-center bg-gray-200 p-2 m-2">
+              <div className="flex flex-col items-center bg-slate-100 m-2 w-80">
                 <img
-                  className="object-contain w-72 h-80"
+                  className="object-contain w-full h-80"
                   src={builder2}
                   alt=""
                 />
-                <span>Специалист по монтажу тепловых насосов</span>
-                <p>Александров П. А.</p>
+                <div className="font-medium text-base break-words text-center">
+                  Специалист по монтажу тепловых насосов
+                </div>
+                <p className="font-light">Александров П. А.</p>
               </div>
-              <div className="flex flex-col items-center bg-gray-200 p-2 m-2">
+              <div className="flex flex-col items-center bg-slate-100 m-2 w-80">
                 <img
-                  className="object-contain w-72 h-80"
+                  className="object-contain w-full h-80"
                   src={builder1}
                   alt=""
                 />
-                <span>Специалист по монтажу тепловых насосов</span>
-                <p>Александров П. А.</p>
+                <div className="font-medium text-base break-words text-center">
+                  Специалист по монтажу тепловых насосов
+                </div>
+                <p className="font-light">Александров П. А.</p>
               </div>
             </div>
           </div>
