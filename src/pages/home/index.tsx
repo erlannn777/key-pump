@@ -330,7 +330,9 @@ const Home = () => {
             <div className="w-1/2 p-4 ">
               <img src={category1Img} alt="" />
               <div className="w-full p-2 bg-slate-50">
-                <div className="text-xl font-normal">ТЕПЛОВЫЕ НАСОСЫ</div>
+                <div className="text-base lg:text-xl font-normal">
+                  ТЕПЛОВЫЕ НАСОСЫ
+                </div>
                 <button className="hidden sm:block px-12 py-2  border border-gray-500">
                   Перейти
                 </button>
@@ -339,7 +341,9 @@ const Home = () => {
             <div className="w-1/2 p-4 ">
               <img src={category2Img} alt="" />
               <div className="w-full p-2 bg-slate-50">
-                <div className="text-xl font-normal">СОЛНЕЧНЫЕ КОЛЛЕКТОРЫ</div>
+                <div className="text-base lg:text-xl font-normal">
+                  СОЛНЕЧНЫЕ КОЛЛЕКТОРЫ
+                </div>
                 <button className="hidden sm:block px-12 py-2  border border-gray-500">
                   Перейти
                 </button>
@@ -350,7 +354,7 @@ const Home = () => {
             <div className="w-1/2 p-4 ">
               <img src={category3Img} alt="" />
               <div className="w-full p-2 bg-slate-50">
-                <div className="text-xl font-normal">
+                <div className="text-base lg:text-xl font-normal">
                   ПОВЕРХНОСТНОЕ ОТОПЛЕНИЕ
                 </div>
                 <button className="hidden sm:block px-12 py-2  border border-gray-500">
@@ -361,7 +365,7 @@ const Home = () => {
             <div className="w-1/2 p-4 ">
               <img src={category4Img} alt="" />
               <div className="w-full p-2 bg-slate-50">
-                <div className="text-xl font-normal">
+                <div className="text-base lg:text-xl font-normal">
                   ПОВЕРХНОСТНОЕ ОХЛАЖДЕНИЕ
                 </div>
                 <button className="hidden sm:block px-12 py-2  border border-gray-500">
