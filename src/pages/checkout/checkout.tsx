@@ -2,15 +2,15 @@ import React from "react";
 
 const Checkout = () => {
   return (
-    <div className="w-full flex flex-col items-center lg:px-12 mt-22 ">
+    <div className="w-full flex flex-col  mt-22 ">
       <div className="w-full text-2xl lg:text-4xl py-4 font-normal text-center">
         Оформление заказа
       </div>
-      <div className="w-full flex  lg:items-start items-center justify-center flex-col md:flex-row">
-        <div className="border rounded m-8 mb-4 p-2 w-80">
+      <div className="w-full flex  md:items-start items-center justify-center flex-col md:flex-row">
+        <div className="border rounded m-8 mb-4 p-2 w-auto">
           <h2>1. Контактные данные</h2>
           <form>
-            <div className="block">
+            <div className="block lg:flex">
               <label className="flex flex-col m-1">
                 Фамилия
                 <input
@@ -28,7 +28,7 @@ const Checkout = () => {
                 />
               </label>
             </div>
-            <div className="mb-4 block">
+            <div className="mb-4 block lg:flex">
               <label className="flex flex-col m-1">
                 Телефон
                 <input
@@ -85,7 +85,7 @@ const Checkout = () => {
             </div>
           </form>
         </div>
-        <div className="border rounded m-8 mb-4 w-80">
+        <div className="border rounded m-8 mb-4 w-auto">
           <h1 className="p-4 text-2xl font-bold">Итоги</h1>
           <div className="border-b-[1.5px]" />
           <div>

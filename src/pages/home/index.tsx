@@ -235,9 +235,12 @@ const Home = () => {
                   key={index}
                   className="w-full block flex justify-center md:flex-row flex-col items-center"
                 >
-                  <Link to="/product" className="w-96 flex justify-center">
+                  <Link
+                    to="/product"
+                    className="w-96 flex justify-center xl:w-1/3"
+                  >
                     <img
-                      className="w-96 h-96 hover:opacity-60"
+                      className="w-96 h-96 hover:opacity-60 xl:w-full xl:h-auto"
                       src={img}
                       alt=""
                     />
@@ -288,7 +291,7 @@ const Home = () => {
             <div className="w-full flex justify-center  block lg:hidden my-3">
               <img className="w-96 h-96" src={advantagesImg} alt="" />
             </div>
-            <p className="opacity-70 my-4 break-words lg:max-w-3xl text-base">
+            <p className="opacity-70 my-4 break-words lg:max-w-4xl text-base">
               Электрический котел забирает столько же энергии, сколько выдает
               тепла. Тепловой насос, наоборот, тратит минимум электроэнергии, а
               тепла производит в три-семь раз больше. Оборудование может
@@ -315,12 +318,8 @@ const Home = () => {
               <span> Долговечность</span>
             </label>
           </div>
-          <div className="p-4  justify-center align-center pattern hidden lg:flex">
-            <img
-              className="w-96 h-96 hidden lg:block"
-              src={advantagesImg}
-              alt=""
-            />
+          <div className="p-4 w-5/12   justify-center align-center pattern hidden lg:flex">
+            <img className=" hidden lg:block" src={advantagesImg} alt="" />
           </div>
         </div>
 
@@ -329,7 +328,7 @@ const Home = () => {
           <div className="flex justify-between">
             <div className="w-1/2 p-4 ">
               <img src={category1Img} alt="" />
-              <div className="w-full p-2 bg-slate-50">
+              <div className="w-full p-2 ">
                 <div className="text-base lg:text-xl font-normal">
                   ТЕПЛОВЫЕ НАСОСЫ
                 </div>
@@ -340,7 +339,7 @@ const Home = () => {
             </div>
             <div className="w-1/2 p-4 ">
               <img src={category2Img} alt="" />
-              <div className="w-full p-2 bg-slate-50">
+              <div className="w-full p-2 ">
                 <div className="text-base lg:text-xl font-normal">
                   СОЛНЕЧНЫЕ КОЛЛЕКТОРЫ
                 </div>
@@ -353,7 +352,7 @@ const Home = () => {
           <div className="flex justify-between">
             <div className="w-1/2 p-4 ">
               <img src={category3Img} alt="" />
-              <div className="w-full p-2 bg-slate-50">
+              <div className="w-full p-2 ">
                 <div className="text-base lg:text-xl font-normal">
                   ПОВЕРХНОСТНОЕ ОТОПЛЕНИЕ
                 </div>
@@ -364,7 +363,7 @@ const Home = () => {
             </div>
             <div className="w-1/2 p-4 ">
               <img src={category4Img} alt="" />
-              <div className="w-full p-2 bg-slate-50">
+              <div className="w-full p-2 ">
                 <div className="text-base lg:text-xl font-normal">
                   ПОВЕРХНОСТНОЕ ОХЛАЖДЕНИЕ
                 </div>
@@ -495,6 +494,10 @@ const Home = () => {
                 },
                 1247: {
                   perPage: 2,
+                  perMove: 1,
+                },
+                1920: {
+                  perPage: 3,
                   perMove: 1,
                 },
               },

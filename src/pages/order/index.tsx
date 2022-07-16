@@ -4,7 +4,9 @@ import del from "./assets/del.png";
 import pochta from "./assets/pochta.png";
 import card from "./assets/card.svg";
 import pay from "./assets/pay.svg";
-
+import pochtaLogo from "./assets/pochta-logo.png";
+import delLogo from "./assets/del-logo.png";
+import cdekLogo from "./assets/cdek-logo.png";
 const Order = () => {
   return (
     <div className=" flex justify-center my-8 mx-2 lg:mx-12">
@@ -15,10 +17,15 @@ const Order = () => {
         <div className="w-full flex justify-start my-4 text-center lg:text-start">
           <span className="text-3xl font-bold">Доставка</span>
         </div>
-        <div className="w-full flex flex-col items-center">
-          <div className="w-full  justify-between items-center flex flex-col lg:flex-row">
+        <div className="w-full flex flex-col items-center ">
+          <div className="w-full  justify-between items-center flex flex-col lg:flex-row mt-4">
             <div className="flex flex-col m-2">
-              <div>
+              <div className="relative">
+                <img
+                  className="absolute top-[-1.75rem] right-[1.25rem]"
+                  src={pochtaLogo}
+                  alt=""
+                />
                 <img className="object-contain" src={pochta} alt="" />
               </div>
               <div className="w-full py-2">
@@ -42,7 +49,12 @@ const Order = () => {
               </label>
             </div>
             <div className="flex flex-col m-2">
-              <div>
+              <div className="relative">
+                <img
+                  className="absolute top-[-1.75rem] right-[1.25rem]"
+                  src={delLogo}
+                  alt=""
+                />
                 <img className="object-contain" src={del} alt="" />
               </div>
               <div className="w-full py-2">
@@ -66,7 +78,12 @@ const Order = () => {
               </label>
             </div>{" "}
             <div className="flex flex-col m-2">
-              <div>
+              <div className="relative">
+                <img
+                  className="absolute top-[-1.75rem] right-[1.25rem]"
+                  src={cdekLogo}
+                  alt=""
+                />
                 <img className="object-contain" src={cdek} alt="" />
               </div>
               <div className="w-full py-2">
@@ -91,8 +108,8 @@ const Order = () => {
             </div>
           </div>
         </div>
-        <div className="w-full">
-          <div className="w-full flex flex-col text-start">
+        <div className="w-full md:w-3/5">
+          <div className="w-full flex flex-col text-start ">
             <span className="font-bold text-2xl pb-2 flex">
               <img className="mr-1" src={card} alt="" /> Оплата
             </span>
@@ -117,9 +134,10 @@ const Order = () => {
               удобным для вас способом.
             </p>
           </div>
-          <div className="border w-full border-gray-500 my-4" />
         </div>
-        <div className="w-full flex flex-col text-start">
+        <div className="border-b w-full border-gray-500 my-4" />
+
+        <div className="w-full flex flex-col text-start md:w-3/5">
           <span className="font-bold text-2xl py-4">Гарантии</span>
           <span className="text-xl pb-2 ">
             На все товары, приобретенные в нашем магазине, предоставляется
@@ -136,9 +154,10 @@ const Order = () => {
               потребителей»).
             </li>
           </ul>
-          <div className="border w-full border-gray-500 my-4" />
         </div>
-        <div className="w-full flex flex-col text-start">
+        <div className="border-b w-full border-gray-500 my-4" />
+
+        <div className="w-full flex flex-col text-start md:w-3/5">
           <span className="font-bold text-2xl py-4">Возврат товара</span>
           <span className="text-xl pb-2">
             Подготовьте, пожалуйста, все необходимые документы:

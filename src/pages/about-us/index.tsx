@@ -45,9 +45,9 @@ const AboutUs = () => {
         </div>
         <div className="flex flex-col items-center">
           <div className="w-full md:flex justify-between items-center block">
-            <div className="lg:w-1/3 flex justify-center pattern p-4">
+            <div className="lg:w-5/12 flex justify-center pattern p-4">
               {" "}
-              <img className="object-contain w-96 h-96" src={firstImg} alt="" />
+              <img className="object-contain " src={firstImg} alt="" />
             </div>
             <div className="lg:w-1/2 w-full">
               <div className="my-4">
@@ -66,8 +66,8 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="w-full  items-center block lg:flex">
-            <div className="flex flex-col text-start md:max-w-3xl">
+          <div className="  items-center block lg:flex">
+            <div className="flex flex-col text-start lg:w-1/2">
               <div className="mr-4">
                 <span className="text-orange-300 underline my-4 ">О НАС</span>
                 <p className="break-words">
@@ -82,25 +82,17 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-            <div className="pattern p-4 lg:w-1/2">
-              <img
-                className="object-contain w-96  h-96"
-                src={secondImg}
-                alt=""
-              />
+            <div className="pattern p-4 lg:w-5/12">
+              <img className="object-contain" src={secondImg} alt="" />
             </div>
           </div>
           <div className="flex flex-col mt-8">
             <div className="text-center">
               <span className="text-4xl">Почему KeyPumps?</span>
             </div>
-            <div className="w-full lg:flex items-center justify-between block">
-              <div>
-                <img
-                  className="object-contain w-80 h-96"
-                  src={fourthImg}
-                  alt=""
-                />
+            <div className="w-full lg:flex items-center justify-between block my-10">
+              <div className="lg:w-5/12">
+                <img className="object-contain " src={fourthImg} alt="" />
               </div>
               <div className="lg:w-1/2 pl-4 flex w-full">
                 <div>
@@ -242,34 +234,22 @@ const AboutUs = () => {
               <span className=" text-3xl text-orange-400 pb-4">команда</span>
             </div>
             <div className="w-full lg:flex justify-center block">
-              <div className="flex flex-col items-center bg-slate-100 m-2 w-80">
-                <img
-                  className="object-contain w-full h-80"
-                  src={builder1}
-                  alt=""
-                />
+              <div className="flex flex-col items-center bg-slate-100 m-2 w-80 xl:w-3/12">
+                <img className="object-contain w-full" src={builder1} alt="" />
                 <div className="font-medium text-base break-words text-center">
                   Специалист по монтажу тепловых насосов
                 </div>
                 <p className="font-light">Александров П. А.</p>
               </div>
-              <div className="flex flex-col items-center bg-slate-100 m-2 w-80">
-                <img
-                  className="object-contain w-full h-80"
-                  src={builder2}
-                  alt=""
-                />
+              <div className="flex flex-col items-center bg-slate-100 m-2 w-80 xl:w-3/12">
+                <img className="object-contain w-full " src={builder2} alt="" />
                 <div className="font-medium text-base break-words text-center">
                   Специалист по монтажу тепловых насосов
                 </div>
                 <p className="font-light">Александров П. А.</p>
               </div>
-              <div className="flex flex-col items-center bg-slate-100 m-2 w-80">
-                <img
-                  className="object-contain w-full h-80"
-                  src={builder1}
-                  alt=""
-                />
+              <div className="flex flex-col items-center bg-slate-100 m-2 w-80 xl:w-3/12">
+                <img className="object-contain w-full " src={builder1} alt="" />
                 <div className="font-medium text-base break-words text-center">
                   Специалист по монтажу тепловых насосов
                 </div>
