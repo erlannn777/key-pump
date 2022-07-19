@@ -3,8 +3,8 @@ import Consultation from "../../components/Consultation";
 import "./faq.css";
 const FAQ = () => {
   return (
-    <>
-      <div className="w-full flex justify-center">
+    <div className="flex flex-col items-center">
+      <div className=" container flex justify-center">
         <div className="w-full container w-full">
           <div className="flex items-start justify-start my-4">
             <h2>
@@ -138,7 +138,7 @@ const FAQ = () => {
         </div>
       </div>
       <Consultation />
-    </>
+    </div>
   );
 };
 

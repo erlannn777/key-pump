@@ -13,6 +13,9 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import articlImg from "../articles/assets/articleImg.png";
 import Consultation from "../../components/Consultation";
 import { Link } from "react-router-dom";
+import Slider from "./slider";
+import { GoPrimitiveDot } from "react-icons/go";
+import { TbCircleDot } from "react-icons/tb";
 
 const Home = () => {
   const ref = useRef();
@@ -20,18 +23,21 @@ const Home = () => {
     {
       title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
       price: "1000000",
+      id: 1,
       img: img,
       desc: "Геотермальный тепловой насос SILA GM-10 S (H) предназначен для использования в системах отопления и горячего водоснабжения...",
     },
     {
       title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
       price: "1000000",
+      id: 2,
       img: img,
       desc: "Геотермальный тепловой насос SILA GM-10 S (H) предназначен для использования в системах отопления и горячего водоснабжения...",
     },
     {
       title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
       price: "1000000",
+      id: 3,
       img: img,
       desc: "Геотермальный тепловой насос SILA GM-10 S (H) предназначен для использования в системах отопления и горячего водоснабжения...",
     },
@@ -187,10 +193,41 @@ const Home = () => {
     },
   ];
 
+  let [slides, setSlides] = useState([
+    {
+      about:
+        "Геотермальный тепловой SGLA GM-10 S (H)  и горячего водоснабжения...",
+      price: "2145 000",
+      oldprice: "370 00",
+      name: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС SILA GM-10 S (H)",
+      img: "../../img/slide.png",
+      id: 1,
+      selected: true,
+    },
+    {
+      about: " Подходит для установки на деревянную/межкомнатную дверь.",
+      price: "2245 000",
+      oldprice: "370 00",
+      name: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС SILA GM-10 S (f)",
+      img: "../../img/slide.png",
+      id: 2,
+      selected: false,
+    },
+    {
+      about: "Геотермальный  деревянную/межкомнатную дверь.",
+      price: "2345 000",
+      oldprice: "370 00",
+      name: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС SILA GM-10 S (B)",
+      img: "../../img/slide.png",
+      id: 3,
+      selected: false,
+    },
+  ]);
   return (
-    <>
-      <div className="lg:mx-24 mx-2">
-        <Splide
+    <div className="flex flex-col items-center">
+      <div className="lg:mx-24 container">
+        <Slider classess={""} slides={slides} setSlides={setSlides} />
+        {/* <Splide
           //@ts-ignore
           ref={ref}
           options={{
@@ -261,11 +298,8 @@ const Home = () => {
                 </SplideSlide>
               ))
             : null}
-          {/* <div className="splide__arrows absolute top-96 flex ">
-            <button className="splide__arrow splide__arrow--prev">Prev</button>
-            <button className="splide__arrow splide__arrow--next">Next</button>
-          </div> */}
-        </Splide>
+         
+        </Splide> */}
         <div className="my-8">
           <div className="break-words text-center lg:text-start text-2xl lg:text-5xl font-light">
             Почему в качестве источника тепла или холода нужно выбрать тепловой
@@ -275,7 +309,7 @@ const Home = () => {
             {advantages.map((item, index) => (
               <div
                 key={index}
-                className="w-80 border-b-2 border-t-2 border-gray flex flex-col items-center m-8 p-4 text-center"
+                className="w-80 h-40 border-b-2 border-t-2 border-gray flex flex-col items-center m-8 p-4 text-center"
               >
                 {item.vector}
                 <p className="font-light">{item.label}</p>
@@ -318,15 +352,15 @@ const Home = () => {
               <span> Долговечность</span>
             </label>
           </div>
-          <div className="p-4 w-5/12   justify-center align-center pattern hidden lg:flex">
+          <div className="p-4 w-4/12   justify-center align-center pattern hidden lg:flex">
             <img className=" hidden lg:block" src={advantagesImg} alt="" />
           </div>
         </div>
 
         <div className="w-full my-4">
           <div className="w-full text-center font-bold text-3xl">Категории</div>
-          <div className="flex justify-between">
-            <div className="w-1/2 p-4 ">
+          <div className="flex justify-around">
+            <div className="w-[40rem] p-4 ">
               <img src={category1Img} alt="" />
               <div className="w-full p-2 ">
                 <div className="text-base lg:text-xl font-normal">
@@ -337,7 +371,7 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="w-1/2 p-4 ">
+            <div className="w-[40rem] p-4 ">
               <img src={category2Img} alt="" />
               <div className="w-full p-2 ">
                 <div className="text-base lg:text-xl font-normal">
@@ -349,8 +383,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between">
-            <div className="w-1/2 p-4 ">
+          <div className="flex justify-around">
+            <div className="w-[40rem] p-4 ">
               <img src={category3Img} alt="" />
               <div className="w-full p-2 ">
                 <div className="text-base lg:text-xl font-normal">
@@ -361,7 +395,7 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="w-1/2 p-4 ">
+            <div className="w-[40rem] p-4 ">
               <img src={category4Img} alt="" />
               <div className="w-full p-2 ">
                 <div className="text-base lg:text-xl font-normal">
@@ -500,6 +534,10 @@ const Home = () => {
                   perPage: 3,
                   perMove: 1,
                 },
+                3000: {
+                  perPage: 3,
+                  perMove: 1,
+                },
               },
             }}
             onMounted={() => {
@@ -554,7 +592,7 @@ const Home = () => {
         {/* <Articles /> */}
       </div>
       <Consultation />
-    </>
+    </div>
   );
 };
 

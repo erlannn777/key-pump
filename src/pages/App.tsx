@@ -23,6 +23,8 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Header />
+        {/* <div className="flex flex-col items-center w-full">
+          <div style={{ maxWidth: "1920px" }}> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
@@ -35,6 +37,8 @@ function App() {
           <Route path="/articles/:id" element={<Article />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
+        {/* </div>
+        </div> */}
         <Footer />
         <CartModal />
       </BrowserRouter>

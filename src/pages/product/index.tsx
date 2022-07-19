@@ -24,8 +24,8 @@ const Product = () => {
     },
   ];
   return (
-    <>
-      <div className="lg:mx-12 mx-2">
+    <div className="flex flex-col items-center">
+      <div className="container lg:mx-12 mx-2">
         <div className="w-full flex items-center mt-6">
           <Link to="/" className="col-span-1  text-xl text-black">
             Главная/
@@ -185,7 +185,7 @@ const Product = () => {
         <Carousel />
       </div>
       <Consultation />
-    </>
+    </div>
   );
 };
 

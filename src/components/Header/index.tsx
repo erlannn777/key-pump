@@ -9,15 +9,15 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 const Header = () => {
   const dispatch = useAppDispatch();
   return (
-    <div>
-      <div className="bg-gray-300 flex justify-around p-1">
+    <div className="bg-gray-800 flex flex-col items-center">
+      <div className="bg-gray-300 flex justify-around p-1 w-full">
         <p className="text-sm">
           Cкидка 10% по промокоду "TEPLO" на все заказы до 10.09
         </p>
         <span className="hidden lg:block">Обратный звонок</span>
       </div>
 
-      <div className="w-full bg-gray-800 p-2">
+      <div className="w-full  p-2 container">
         <div className="w-full lg:hidden flex justify-between">
           <div className="">
             <Sidebar />{" "}
