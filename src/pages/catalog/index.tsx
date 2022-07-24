@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../../img/catalog.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -9,7 +9,10 @@ import { useWindowSize } from "../../hooks/useWindowsize";
 import MultiRangeSlider from "./MultiRangeSlider";
 
 const Catalog = () => {
-  let [range, setRange] = React.useState({ start: 0, end: 100 });
+  let [range, setRange] = useState<{ start: number; end: number }>({
+    start: 0,
+    end: 100,
+  });
   const { width } = useWindowSize();
   const products = [
     {
@@ -168,9 +171,9 @@ const Catalog = () => {
                           <div className="w-full flex justify-center mt-4">
                             <MultiRangeSlider
                               min={0}
-                              max={1000}
+                              max={90000}
                               onChange={({ min, max }) =>
-                                console.log(`min = ${min}, max = ${max}`)
+                                setRange({ start: min, end: max })
                               }
                             />
                           </div>
@@ -178,7 +181,7 @@ const Catalog = () => {
                         <div className="border border-gray w-full my-4"></div>
                       </div>
 
-                      <div className="w-full ">
+                      <div className="w-full z-50 bg-white">
                         <input
                           type="checkbox"
                           name="panel"
@@ -223,7 +226,7 @@ const Catalog = () => {
                         </div>
                         <div className="border border-gray w-full my-4"></div>
                       </div>
-                      <div className="w-full ">
+                      <div className="w-full z-50 bg-white">
                         <input
                           type="checkbox"
                           name="panel"
