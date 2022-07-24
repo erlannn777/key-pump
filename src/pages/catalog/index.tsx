@@ -6,11 +6,36 @@ import Carousel from "../../components/Carousel";
 import { defaultTheme, Provider, RangeSlider } from "@adobe/react-spectrum";
 import Consultation from "../../components/Consultation";
 import { useWindowSize } from "../../hooks/useWindowsize";
+import MultiRangeSlider from "./MultiRangeSlider";
 
 const Catalog = () => {
   let [range, setRange] = React.useState({ start: 0, end: 100 });
   const { width } = useWindowSize();
   const products = [
+    {
+      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
+      price: "1000000",
+      oldPrice: 37000,
+      img: img,
+      avaible: true,
+      counted: false,
+    },
+    {
+      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
+      price: "1000000",
+      oldPrice: 37000,
+      img: img,
+      avaible: true,
+      counted: false,
+    },
+    {
+      title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
+      price: "1000000",
+      oldPrice: 37000,
+      img: img,
+      avaible: true,
+      counted: false,
+    },
     {
       title: "ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ НАСОС NIBE F1345",
       price: "1000000",
@@ -92,7 +117,7 @@ const Catalog = () => {
             }`}
           >
             <div id="panel-999" className="lg:w-1/8  accordion__body">
-              <div className="flex flex-col items-center w-[350px]">
+              <div className="flex flex-col items-center w-[340px]">
                 <span className="flex items-center  lg:hidden">
                   Геотермальные тепловые насосы{" "}
                   <svg
@@ -141,13 +166,13 @@ const Catalog = () => {
                             </div>
                           </div>
                           <div className="w-full flex justify-center mt-4">
-                            <Provider theme={defaultTheme}>
-                              <RangeSlider
-                                width="333px"
-                                value={range}
-                                onChange={setRange}
-                              />
-                            </Provider>
+                            <MultiRangeSlider
+                              min={0}
+                              max={1000}
+                              onChange={({ min, max }) =>
+                                console.log(`min = ${min}, max = ${max}`)
+                              }
+                            />
                           </div>
                         </div>
                         <div className="border border-gray w-full my-4"></div>
@@ -295,8 +320,8 @@ const Catalog = () => {
             </div>
           </div>
 
-          <div className="w-full p-2 flex flex-col items-center">
-            <div className="flex justify-between mx-2 w-full">
+          <div className="w-full  flex flex-col items-center mx-1">
+            <div className="flex justify-between px-4 mb-4 w-full">
               <div className="hidden lg:block">
                 <span className="flex items-center ">
                   Геотермальные тепловые насосы{" "}
@@ -319,7 +344,7 @@ const Catalog = () => {
               </div>
               <div className="dropdown inline-block relative ml-2 ">
                 <button className="bg-white border text-gray-700 font-semi-bold py-2 px-4 rounded inline-flex items-center">
-                  <span className="mr-1 w-64">По пулярности</span>
+                  <span className="mr-1 w-40">По пулярности</span>
                   <svg
                     className="fill-current h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"

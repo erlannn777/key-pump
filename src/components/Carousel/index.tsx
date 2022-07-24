@@ -75,7 +75,7 @@ export default function Carousel() {
 
   return (
     <div className="my-2">
-      <div className="text-3xl font-base text-center lg:text-start">
+      <div className="text-4xl font-medium text-center lg:text-start my-9">
         Вы недавно просмотрели
       </div>
       <Splide

@@ -51,10 +51,10 @@ const Tab = () => {
           <div className="px-4 py-5 flex-auto w-full">
             <div className="tab-content tab-space w-full">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                <div className="w-full block lg:flex justify-center">
-                  <table className="w-80 m-2 lg:mx-24">
+                <div className="w-full block lg:flex justify-between">
+                  <table className="w-full lg:w-1/2 m-2 ">
                     <tbody>
-                      <tr className="bg-slate-100">
+                      <tr className="bg-slate-50">
                         <td className="">Тип</td>
                         <td className="">Геотермальный</td>
                       </tr>
@@ -62,7 +62,7 @@ const Tab = () => {
                         <td className="">Рабочие режимы</td>
                         <td className="">Отопление, ГВС</td>
                       </tr>
-                      <tr className="bg-slate-100">
+                      <tr className="bg-slate-50">
                         <td className="">Рабочее напряжение</td>
                         <td className="">220-240 В / 50 Гц / 1 фаза</td>
                       </tr>
@@ -70,7 +70,7 @@ const Tab = () => {
                         <td className="">Мощность нагрева</td>
                         <td className="">15 кВт</td>
                       </tr>{" "}
-                      <tr className="bg-slate-100">
+                      <tr className="bg-slate-50">
                         <td className="">Потребляемая мощность</td>
                         <td className="">2,9 кВт</td>
                       </tr>{" "}
@@ -80,9 +80,9 @@ const Tab = () => {
                       </tr>
                     </tbody>
                   </table>
-                  <table className="w-80 m-2 lg:mx-24">
+                  <table className="w-full lg:w-1/2 m-2 ">
                     <tbody>
-                      <tr className="bg-slate-100">
+                      <tr className="bg-slate-50">
                         <td className="">Максимальная температура нагрева</td>
                         <td className="">60°С</td>
                       </tr>
@@ -90,7 +90,7 @@ const Tab = () => {
                         <td className="">Хладагент</td>
                         <td className="">60°С</td>
                       </tr>
-                      <tr className="bg-slate-100">
+                      <tr className="bg-slate-50">
                         <td className="">Размеры</td>
                         <td className="">R410A</td>
                       </tr>
@@ -98,7 +98,7 @@ const Tab = () => {
                         <td className="">Температура источника тепла</td>
                         <td className="">-10 +35°С</td>
                       </tr>{" "}
-                      <tr className="bg-slate-100">
+                      <tr className="bg-slate-50">
                         <td className="">Контроллер</td>
                         <td className="">Проводной</td>
                       </tr>{" "}
@@ -160,19 +160,19 @@ const Tab = () => {
                 </p>
               </div>
               <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                <div className="w-full flex justify-center">
-                  <tbody className="w-80">
-                    <tr className="bg-slate-100">
-                      <td className="">Производитель</td>
-                      <td className="">Nibe</td>
+                <div className="w-full">
+                  <tbody className="lg:w-1/2 w-full">
+                    <tr className="bg-slate-50">
+                      <td className="w-96">Производитель</td>
+                      <td className="w-96">Nibe</td>
                     </tr>
                     <tr>
-                      <td className="">Страна-производитель</td>
-                      <td className="">Швеция</td>
+                      <td className="w-96">Страна-производитель</td>
+                      <td className="w-96">Швеция</td>
                     </tr>
-                    <tr className="bg-slate-100">
-                      <td className="">Артикул</td>
-                      <td className="">40-280</td>
+                    <tr className="bg-slate-50">
+                      <td className="w-96">Артикул</td>
+                      <td className="w-96">40-280</td>
                     </tr>
                   </tbody>
                 </div>

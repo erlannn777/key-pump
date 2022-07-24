@@ -319,13 +319,13 @@ const Home = () => {
         </div>
         <div className="w-full lg:flex justify-between my-3">
           <div className="flex flex-col">
-            <div className="text-3xl font-light text-center lg:text-start">
+            <div className="text-3xl font-medium text-center lg:text-start">
               Преимущества
             </div>
             <div className="w-full flex justify-center  block lg:hidden my-3">
               <img className="w-96 h-96" src={advantagesImg} alt="" />
             </div>
-            <p className="opacity-70 my-4 break-words lg:max-w-4xl text-base">
+            <p className="opacity-70 my-4 break-words lg:max-w-4xl text-lg font-medium">
               Электрический котел забирает столько же энергии, сколько выдает
               тепла. Тепловой насос, наоборот, тратит минимум электроэнергии, а
               тепла производит в три-семь раз больше. Оборудование может
@@ -334,35 +334,43 @@ const Home = () => {
             </p>
             <label className="m-2 lg:mt-12 custom-checkbox">
               <input className="m-1" type="checkbox" checked={true} />
-              <span> Возможность установки в любой местности</span>
+              <span className="text-lg font-medium">
+                {" "}
+                Возможность установки в любой местности
+              </span>
             </label>
             <label className="m-2 custom-checkbox">
               <input className="m-1" type="checkbox" checked={true} />
-              <span>
+              <span className="text-lg font-medium">
                 {" "}
                 Универсальность. Зимой они обеспечивают тепло, летом прохладу
               </span>
             </label>
             <label className="m-2 custom-checkbox">
               <input className="m-1" type="checkbox" checked={true} />
-              <span> Безопасность для окружающей среды</span>
+              <span className="text-lg font-medium">
+                {" "}
+                Безопасность для окружающей среды
+              </span>
             </label>
             <label className="m-2 custom-checkbox">
               <input className="m-1" type="checkbox" checked={true} />
-              <span> Долговечность</span>
+              <span className="text-lg font-medium"> Долговечность</span>
             </label>
           </div>
-          <div className="p-4 w-4/12   justify-center align-center pattern hidden lg:flex">
+          <div className="p-4 w-5/12   justify-center align-center pattern hidden lg:flex">
             <img className=" hidden lg:block" src={advantagesImg} alt="" />
           </div>
         </div>
 
         <div className="w-full my-4">
-          <div className="w-full text-center font-bold text-3xl">Категории</div>
-          <div className="flex justify-around">
-            <div className="w-[40rem] p-4 ">
-              <img src={category1Img} alt="" />
-              <div className="w-full p-2 ">
+          <div className="w-full text-center text-4xl font-semibold mb-9">
+            Категории
+          </div>
+          <div className="flex justify-between">
+            <div className="w-[45rem] p-4 ">
+              <img className="w-full" src={category1Img} alt="" />
+              <div className="w-full p-2 bg-slate-50">
                 <div className="text-base lg:text-xl font-normal">
                   ТЕПЛОВЫЕ НАСОСЫ
                 </div>
@@ -371,9 +379,9 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="w-[40rem] p-4 ">
-              <img src={category2Img} alt="" />
-              <div className="w-full p-2 ">
+            <div className="w-[45rem] p-4 ">
+              <img className="w-full" src={category2Img} alt="" />
+              <div className="w-full p-2 bg-slate-50">
                 <div className="text-base lg:text-xl font-normal">
                   СОЛНЕЧНЫЕ КОЛЛЕКТОРЫ
                 </div>
@@ -383,10 +391,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-around">
-            <div className="w-[40rem] p-4 ">
-              <img src={category3Img} alt="" />
-              <div className="w-full p-2 ">
+          <div className="flex justify-between">
+            <div className="w-[45rem] p-4 ">
+              <img className="w-full" src={category3Img} alt="" />
+              <div className="w-full p-2 bg-slate-50">
                 <div className="text-base lg:text-xl font-normal">
                   ПОВЕРХНОСТНОЕ ОТОПЛЕНИЕ
                 </div>
@@ -395,9 +403,9 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="w-[40rem] p-4 ">
-              <img src={category4Img} alt="" />
-              <div className="w-full p-2 ">
+            <div className="w-[45rem] p-4 ">
+              <img className="w-full" src={category4Img} alt="" />
+              <div className="w-full p-2 bg-slate-50">
                 <div className="text-base lg:text-xl font-normal">
                   ПОВЕРХНОСТНОЕ ОХЛАЖДЕНИЕ
                 </div>
@@ -412,7 +420,7 @@ const Home = () => {
           </div>
         </div>
         <div className="my-2">
-          <div className="text-2xl lg:text-3xl font-normal  text-center ">
+          <div className="text-2xl lg:text-4xl font-semibold  text-center my-9">
             Наши популярные продукты
           </div>
           <Splide
@@ -458,9 +466,9 @@ const Home = () => {
               ? popular.map((item, index) => (
                   <SplideSlide
                     key={index}
-                    className="w-72  border border-gray flex flex-col m-1"
+                    className="w-72 border border-gray flex flex-col m-1"
                   >
-                    <div className="w-full h-80  bg-slate-100">
+                    <div className="w-full h-96  bg-slate-100">
                       <div className="relative flex justify-between p-2">
                         <div className="flex col-span-2 align-middle gap-2">
                           <svg
@@ -497,7 +505,7 @@ const Home = () => {
                         </span>
                       </Link>
                       <div className="w-full flex justify-between items-center">
-                        <span>{item.price}</span>
+                        <span className="font-medium">{item.price}</span>
                       </div>
                     </div>
                   </SplideSlide>
@@ -506,7 +514,9 @@ const Home = () => {
           </Splide>
         </div>
         <div className="my-2">
-          <span className="text-2xl lg:text-3xl font-normal m-12">Статьи</span>
+          <span className="text-2xl lg:text-4xl font-semibold m-12">
+            Статьи
+          </span>
           <Splide
             //@ts-ignore
             ref={ref}
